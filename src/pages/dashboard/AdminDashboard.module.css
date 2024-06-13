@@ -1,0 +1,115 @@
+.managment {
+  width: 79.6875rem; /* 1275px */
+  height: 37.5rem; /* 600px */
+  left: 15.625rem; /* 250px */
+  position: fixed;
+  top: 4.375rem; /* 70px */
+}
+
+.AccommodationList {
+  position: absolute;
+  left: 3.125rem; /* 50px */
+  width: 12.5rem; /* 200px */
+  height: 12.5rem; /* 200px */
+  top: 3.125rem; /* 50px */
+  cursor: pointer;
+  background-color: #c1ece4;
+  border: none;
+  background-image: url("./pictures/l.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  padding-top: 7.5rem; /* 120px */
+}
+
+.UserList {
+  position: absolute;
+  left: 18.75rem; /* 300px */
+  width: 12.5rem; /* 200px */
+  height: 12.5rem; /* 200px */
+  top: 3.125rem; /* 50px */
+  cursor: pointer;
+  background-color: #c1ece4;
+  border: none;
+  background-image: url("./pictures/j.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  padding-top: 7.5rem; /* 120px */
+}
+
+.providerList {
+  position: absolute;
+  left: 34.375rem; /* 550px */
+  width: 12.5rem; /* 200px */
+  height: 12.5rem; /* 200px */
+  top: 3.125rem; /* 50px */
+  cursor: pointer;
+  background-color: #c1ece4;
+  border: none;
+  background-image: url("./pictures/b.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  padding-top: 7.5rem; /* 120px */
+}
+
+.Adminstrators {
+  position: absolute;
+  left: 50rem; /* 800px */
+  width: 12.5rem; /* 200px */
+  height: 12.5rem; /* 200px */
+  top: 3.125rem; /* 50px */
+  background-image: url("./pictures/e.png");
+  background-repeat: no-repeat;
+  background-color: #c1ece4;
+  background-size: auto;
+  background-position-x: center;
+}
+
+.Admin {
+  position: absolute;
+  left: 3.125rem; /* 50px */
+  width: 7.5rem; /* 120px */
+  height: 2.5rem; /* 40px */
+  border-radius: 1.25rem; /* 20px */
+  top: 9.375rem; /* 150px */
+  border: none;
+  background-color: #c1ece4;
+  color: white;
+  cursor: pointer;
+  background-size: auto;
+  background-position-x: center;
+}
+
+.Rental {
+  position: absolute;
+  left: 3.125rem; /* 50px */
+  width: 12.5rem; /* 200px */
+  height: 12.5rem; /* 200px */
+  top: 17.8125rem; /* 270px */
+  cursor: pointer;
+  border: none;
+  background-color: #c1ece4;
+  background-image: url("./pictures/t.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  padding-top: 7.5rem; /* 120px */
+}
+
+.financialGrowth {
+  position: absolute;
+  left: 18.75rem; /* 300px */
+  width: 12.5rem; /* 200px */
+  height: 12.5rem; /* 200px */
+  border: none;
+  top: 17.8125rem; /* 270px */
+  cursor: pointer;
+  background-color: #c1ece4;
+  background-image: url("./pictures/r.png");
+  background-size: auto;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-top: 7.5rem; /* 120px */
+}

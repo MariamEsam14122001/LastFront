@@ -1,0 +1,34 @@
+.button {
+  width: 12.5rem; /* 200px converted to rem */
+  cursor: pointer;
+  height: 2.5rem; /* 40px converted to rem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6.25rem; /* 100px converted to rem */
+  background-color: #ff9eaa; /* Sea Green */
+  color: #f9f9e0; /* White */
+  font-size: 1.25rem; /* 20px converted to rem */
+  border-color: #3aa6b9;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 1.25rem; /* 20px converted to rem */
+}
+
+.button:hover {
+  background-color: #3aa6b9; /* Dodger Blue */
+}
+
+.logout {
+  top: 0.3125rem; /* 5px converted to rem */
+  left: 0.9375rem; /* 15px converted to rem */
+  color: #f9f9e0; /* White */
+  width: 10.5rem; /* 168px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-weight: 600;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}

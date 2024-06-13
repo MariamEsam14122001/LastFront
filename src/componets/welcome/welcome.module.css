@@ -1,0 +1,34 @@
+.welcomecomponent {
+  top: 1.0625rem;
+  left: 43.75rem;
+  width: 37.875rem;
+  height: 50.0625rem;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.text {
+  top: 34.8125rem;
+  left: 5rem;
+  color: black;
+  height: auto;
+  position: absolute;
+  font-size: 4.4205rem;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.image {
+  top: 0rem;
+  left: 0rem;
+  width: 37.875rem;
+  height: 34.8125rem;
+}

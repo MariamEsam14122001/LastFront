@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.component1 {
+  top: 3.625rem; /* 58px / 16 */
+  left: 1.875rem; /* 30px / 16 */
+  width: 40.625rem; /* 650px / 16 */
+  height: 54.0625rem; /* 865px / 16 */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: #3aa6b9;
+  border-width: 0.0625rem; /* 1px / 16 */
+  border-radius: 1.875rem; /* 30px / 16 */
+  background-color: #c1ece4;
+}
+
+.user {
+  top: 4.8125rem; /* 77px / 16 */
+  left: 4.0625rem; /* 65px / 16 */
+  width: 32.4375rem; /* 519px / 16 */
+  height: 15rem; /* 240px / 16 */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: #3aa6b9;
+  border-width: 0.0625rem; /* 1px / 16 */
+  border-radius: 1.875rem; /* 30px / 16 */
+  background-color: #3aa6b9;
+}
+
+.text {
+  top: 6.0625rem; /* 97px / 16 */
+  left: 15.5625rem; /* 249px / 16 */
+  color: rgba(255, 255, 255, 1);
+  width: 16.875rem; /* 270px / 16 */
+  height: auto;
+  position: absolute;
+  font-size: 2.5rem; /* 40px / 16 */
+  font-style: Extra Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.man1 {
+  top: 0.0625rem; /* 1px / 16 */
+  left: 0.875rem; /* 14px / 16 */
+  width: 11.3125rem; /* 181px / 16 */
+  height: 12rem; /* 192px / 16 */
+  position: absolute;
+}
+
+.owner {
+  top: 31.4375rem; /* 503px / 16 */
+  left: 5.0625rem; /* 81px / 16 */
+  width: 32.4375rem; /* 519px / 16 */
+  height: 15rem; /* 240px / 16 */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: #3aa6b9;
+  border-width: 0.0625rem; /* 1px / 16 */
+  border-radius: 1.875rem; /* 30px / 16 */
+  background-color: #3aa6b9;
+}
+
+.text1 {
+  top: 6.1875rem; /* 99px / 16 */
+  left: 13.5rem; /* 216px / 16 */
+  color: rgba(255, 244, 244, 1);
+  width: 17.9375rem; /* 287px / 16 */
+  height: auto;
+  position: absolute;
+  font-size: 2.5rem; /* 40px / 16 */
+  font-style: Extra Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.broker1 {
+  top: 0.875rem; /* 14px / 16 */
+  left: 1.25rem; /* 20px / 16 */
+  width: 10.5625rem; /* 169px / 16 */
+  height: 10.5625rem; /* 169px / 16 */
+  position: absolute;
+}

@@ -1,0 +1,207 @@
+.form {
+  top: 25rem; /* 400px */
+  left: 18.75rem; /* 300px */
+  width: 46.25rem; /* 740px */
+  height: 50rem; /* 800px */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(172, 233, 252, 0.548);
+  border-color: rgb(9, 192, 248);
+  border-style: solid;
+  border-radius: 6.25rem; /* 100px */
+}
+
+.gender {
+  top: 20.625rem; /* 330px */
+  left: 8.6875rem; /* 139px */
+  color: black;
+  width: 5.25rem; /* 84px */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.userprofile {
+  top: 9.375rem; /* 150px */
+  left: 16.875rem; /* 270px */
+  color: black;
+  width: 19.9375rem; /* 319px */
+  height: auto;
+  position: absolute;
+  font-size: 2.25rem; /* 36px */
+  font-style: SemiBold;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.full-name {
+  top: 15.625rem; /* 250px */
+  left: 8.6875rem; /* 139px */
+  width: 7.375rem; /* 118px */
+  height: 1.875rem; /* 30px */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.name {
+  color: black;
+  width: 7.375rem; /* 118px */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.city {
+  top: 30.625rem; /* 490px */
+  left: 8.625rem; /* 138px */
+  color: black;
+  width: 4.3125rem; /* 69px */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.phone {
+  top: 35.625rem; /* 570px */
+  left: 8.625rem; /* 138px */
+  color: black;
+  width: 4.3125rem; /* 69px */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.button {
+  top: 43.75rem; /* 700px */
+  left: 16.25rem; /* 260px */
+  width: 12.5rem; /* 200px */
+  height: 2.5rem; /* 40px */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(9, 192, 248, 0.507);
+  border-radius: 1.25rem; /* 20px */
+  cursor: pointer;
+}
+
+.accountsetting {
+  top: 0.3125rem; /* 5px */
+  left: 1.25rem; /* 20px */
+  color: black;
+  width: 10.5rem; /* 168px */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px */
+  font-style: SemiBold;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.nameinput {
+  top: 17.5rem; /* 280px */
+  left: 7.9375rem; /* 127px */
+  width: 29rem; /* 464px */
+  height: 2.5rem; /* 40px */
+  position: absolute;
+}
+
+.genderinput {
+  top: 22.5rem; /* 360px */
+  left: 7.9375rem; /* 127px */
+  width: 29rem; /* 464px */
+  height: 2.5rem; /* 40px */
+  position: absolute;
+}
+
+.age {
+  top: 25.625rem; /* 410px */
+  left: 8.625rem; /* 138px */
+  color: black;
+  width: 4.3125rem; /* 69px */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.cityinput {
+  top: 32.5rem; /* 520px */
+  left: 7.9375rem; /* 127px */
+  width: 29rem; /* 464px */
+  height: 2.5rem; /* 40px */
+  position: absolute;
+}
+
+.ageinput {
+  top: 27.5rem; /* 440px */
+  left: 7.9375rem; /* 127px */
+  width: 29rem; /* 464px */
+  height: 2.5rem; /* 40px */
+  position: absolute;
+}
+
+.phoneinput {
+  top: 37.5rem; /* 600px */
+  left: 7.9375rem; /* 127px */
+  width: 29rem; /* 464px */
+  height: 2.5rem; /* 40px */
+  position: absolute;
+}
+
+.photo {
+  position: absolute;
+  top: 11.25rem; /* 180px */
+  left: 48.125rem; /* 770px */
+}
+
+.foot {
+  position: relative;
+  top: 85rem;
+}

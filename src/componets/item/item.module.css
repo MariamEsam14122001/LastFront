@@ -1,0 +1,108 @@
+.card {
+  margin-left: 3.125rem; /* 50px */
+  margin-bottom: 3.125rem; /* 50px */
+  /* Add margin to create space between cards */
+}
+
+.item {
+  width: 15.625rem; /* 250px */
+  height: 34.375rem; /* 550px */
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.wishlist {
+  top: 29rem;
+  left: 20rem;
+  width: 4rem; /* 64px */
+  height: 3.875rem; /* 62px */
+  position: absolute;
+}
+
+.content {
+  gap: 1rem; /* 16px */
+  top: 17.5rem; /* 280px */
+  left: 1.4375rem; /* 23px */
+  width: 23.4375rem; /* 375px */
+  height: 7.0625rem; /* 113px */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+
+.frame53 {
+  gap: 1rem; /* 16px */
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.text {
+  color: rgba(24, 24, 24, 1);
+  height: auto;
+  font-size: 1rem; /* 16px */
+  font-style: Bold;
+  text-align: left;
+  font-family: Quicksand;
+  font-weight: 700;
+  line-height: 100%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text2 {
+  color: rgba(232, 151, 75, 1);
+  height: auto;
+  font-size: 1rem; /* 16px */
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Serif;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame52 {
+  gap: 0.5rem; /* 8px */
+  display: flex;
+  align-items: center;
+}
+
+.locationonblack24dp2 {
+  width: 1rem; /* 16px */
+  height: 1rem; /* 16px */
+}
+
+.text4 {
+  color: rgba(127, 127, 127, 1);
+  height: auto;
+  font-size: 0.75rem; /* 12px */
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 100%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.image {
+  top: 1rem;
+  left: 1rem;
+  width: 18.75rem; /* 300px */
+  height: 15rem;
+  position: absolute;
+  border-radius: 1rem; /* 16px */
+}
+
+.root-class-name {
+  top: 67.4375rem; /* 1079px */
+  left: 7rem; /* 112px */
+  position: absolute;
+}

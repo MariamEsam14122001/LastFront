@@ -1,0 +1,377 @@
+.form {
+  top: 45rem; /* 30px converted to rem */
+  left: 17rem; /* 80px converted to rem */
+  width: 46.25rem; /* 740px converted to rem */
+  height: 56.25rem; /* 900px converted to rem */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(172, 233, 252, 0.548);
+  border-radius: 6.25rem; /* 100px converted to rem */
+  border-color: rgb(9, 192, 248);
+  border-style: solid;
+}
+
+.gender {
+  top: 32.875rem; /* 524px converted to rem */
+  left: 8.6875rem; /* 139px converted to rem */
+  color: black;
+  width: 5.25rem; /* 84px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.statusinput {
+  top: 29.875rem; /* 478px converted to rem */
+  left: 7.9375rem; /* 127px converted to rem */
+  width: 29rem; /* 464px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.0625rem; /* 1px converted to rem */
+  border-radius: 0.9375rem; /* 6px converted to rem */
+}
+
+.userprofile {
+  top: 4.1875rem; /* 67px converted to rem */
+  left: 7.9375rem; /* 127px converted to rem */
+  color: black;
+  width: 19.9375rem; /* 319px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 2.25rem; /* 36px converted to rem */
+  font-style: SemiBold;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.full-name {
+  top: 8.5625rem; /* 137px converted to rem */
+  left: 8.6875rem; /* 139px converted to rem */
+  width: 7.375rem; /* 118px converted to rem */
+  height: 1.875rem; /* 30px converted to rem */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.name {
+  color: black;
+  width: 7.375rem; /* 118px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+/* Add other styles with rem units here */
+
+.email-address {
+  top: 13.625rem; /* 218px converted to rem */
+  left: 8.625rem; /* 137.99966430664062px converted to rem */
+  width: 9.5625rem; /* 153px converted to rem */
+  height: 1.875rem; /* 30px converted to rem */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.email {
+  color: black;
+  width: 9.5625rem; /* 153px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.password {
+  top: 18.625rem; /* 298px converted to rem */
+  left: 8.625rem; /* 138px converted to rem */
+  width: 7.4375rem; /* 119px converted to rem */
+  height: 6.25rem; /* 100px converted to rem */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.password1 {
+  color: black;
+  width: 7.4375rem; /* 119px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.passwordd {
+  top: 23.625rem; /* 378px converted to rem */
+  left: 8.625rem; /* 138px converted to rem */
+  width: 18.75rem; /* 300px converted to rem */
+  height: 6.25rem; /* 100px converted to rem */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.password2 {
+  color: black;
+  width: 18.75rem; /* 300px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.status {
+  top: 28.125rem; /* 450px converted to rem */
+  left: 8.75rem; /* 140px converted to rem */
+  color: black;
+  width: 4.3125rem; /* 69px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.phone {
+  top: 43.4375rem; /* 695px converted to rem */
+  left: 8.625rem; /* 138px converted to rem */
+  color: black;
+  width: 4.3125rem; /* 69px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.button {
+  top: 50rem; /* 800px converted to rem */
+  left: 7.9375rem; /* 127px converted to rem */
+  width: 12.5rem; /* 200px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: rgba(9, 192, 248, 0.507);
+  border-radius: 1.25rem; /* 20px converted to rem */
+  cursor: pointer;
+}
+
+.accountsetting {
+  top: 0.3125rem; /* 5px converted to rem */
+  left: 1.25rem; /* 20px converted to rem */
+  color: black;
+  width: 10.5rem; /* 168px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: SemiBold;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.nameinput {
+  top: 10.4375rem; /* 167px converted to rem */
+  left: 8.625rem; /* 138px converted to rem */
+  width: 29rem; /* 464px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.0625rem; /* 1px converted to rem */
+  border-radius: 0.9375rem; /* 6px converted to rem */
+}
+
+.emailinput {
+  top: 15.9375rem; /* 253px converted to rem */
+  left: 8.625rem; /* 138px converted to rem */
+  width: 29rem; /* 464px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.0625rem; /* 1px converted to rem */
+  border-radius: 0.9375rem; /* 6px converted to rem */
+}
+
+.genderinput {
+  top: 34.625rem; /* 554px converted to rem */
+  left: 8.625rem; /* 138px converted to rem */
+  width: 29rem; /* 464px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.0625rem; /* 1px converted to rem */
+  border-radius: 0.9375rem; /* 6px converted to rem */
+}
+
+.age {
+  top: 37.75rem; /* 604px converted to rem */
+  left: 8.625rem; /* 138px converted to rem */
+  color: black;
+  width: 4.3125rem; /* 69px converted to rem */
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem; /* 20px converted to rem */
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.passwordinput {
+  top: 20.5rem; /* 328px converted to rem */
+  left: 8.625rem; /* 138px converted to rem */
+  width: 29rem; /* 464px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.0625rem; /* 1px converted to rem */
+  border-radius: 0.9375rem; /* 6px converted to rem */
+}
+
+.passwordinput2 {
+  top: 25.5rem; /* 408px converted to rem */
+  left: 8.625rem; /* 127px converted to rem */
+  width: 29rem; /* 464px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.0625rem; /* 1px converted to rem */
+  border-radius: 0.9375rem; /* 6px converted to rem */
+}
+
+.ageinput {
+  top: 39.6875rem; /* 635px converted to rem */
+  left: 8.625rem; /* 127px converted to rem */
+  width: 29rem; /* 464px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.0625rem; /* 1px converted to rem */
+  border-radius: 0.9375rem; /* 6px converted to rem */
+}
+
+.phoneinput {
+  top: 45rem; /* 720px converted to rem */
+  left: 8.625rem; /* 127px converted to rem */
+  width: 29rem; /* 464px converted to rem */
+  height: 2.5rem; /* 40px converted to rem */
+  position: absolute;
+  border-color: black;
+  border-style: solid;
+  border-width: 0.0625rem; /* 1px converted to rem */
+  border-radius: 0.9375rem; /* 6px converted to rem */
+}
+
+.upload-container {
+  position: relative;
+}
+
+.browse-button {
+  color: rgba(172, 233, 252, 0.548);
+  text-align: center;
+  cursor: pointer;
+  top: 87rem; /* 400px converted to rem */
+  border-style: solid;
+  border-width: 0.125rem; /* 2px converted to rem */
+  border-color: black;
+  border-radius: 1.25rem; /* 20px converted to rem */
+  position: absolute;
+  width: 12.75rem; /* 300px converted to rem */
+  height: 2.2rem; /* 30px converted to rem */
+  left: 43.1875rem; /* 1070px converted to rem */
+  font-size: 1.25rem; /* 20px converted to rem */
+  color: black;
+  background-color: rgba(9, 192, 248, 0.507);
+}
+
+.teext {
+  position: absolute;
+  top: 21.875rem; /* 350px converted to rem */
+  left: 14.125rem; /* 1150px converted to rem */
+  color: white;
+}
+.foot {
+  position: relative;
+  top: 105rem;
+  margin-top: 1.25rem; /* Add some space above the footer */
+}
+.image-preview {
+  margin-top: 1rem;
+  text-align: center;
+  /*display: inline-block;*/
+}
+
+.image-preview-img {
+  max-width: 27rem;
+  height: 27rem;
+  border-radius: 1rem;
+}

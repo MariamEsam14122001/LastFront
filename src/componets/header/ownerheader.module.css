@@ -1,0 +1,43 @@
+/* Header Styles */
+.header {
+  background-color: #3aa6b9;
+  padding: 0.625rem 0; /* 10px converted to rem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo {
+  width: 9.375rem; /* 150px converted to rem */
+  height: auto;
+  margin-right: 1.25rem; /* 20px converted to rem */
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li a {
+  color: white;
+  margin-right: 3.125rem; /* 50px converted to rem */
+  font-size: 1.875rem; /* 30px converted to rem */
+  text-decoration: none;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.profile-icons {
+  margin-left: auto;
+}
+
+.profile-icons img {
+  width: 3.125rem; /* 50px converted to rem */
+  height: auto;
+  margin-left: 1.25rem; /* 20px converted to rem */
+}
