@@ -28,7 +28,8 @@ const Home = () => {
     try {
       const token = sessionStorage.getItem("authToken");
       const response = await fetch(
-        "http://localhost:8000/api/accommodation/some",
+        //       //`http://localhost:8000/api/recommendation_system_output`,
+        `http://localhost:8000/api/accommodation/some`,
         {
           method: "GET",
           headers: {

@@ -23,9 +23,9 @@ const OwnersEdit = () => {
     no_of_tenants: "",
   });
 
+  const [mainImage, setMainImage] = useState({ main_image: null });
   const [selectedFiles, setSelectedFiles] = useState({
-    images: [],
-    main_image: null,
+    image: [],
   });
 
   useEffect(() => {
@@ -34,15 +34,20 @@ const OwnersEdit = () => {
 
   const fetchPropertyData = async () => {
     try {
+      const token = sessionStorage.getItem("authToken");
       const response = await axios.get(
-        `http://localhost:8000/api/properties/${id}`
+        `http://localhost:8000/api/accommodations/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
       setPropertyData(response.data);
     } catch (error) {
       console.error("Error fetching property data:", error);
     }
   };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPropertyData({
@@ -52,17 +57,19 @@ const OwnersEdit = () => {
   };
 
   const handleFileChange = (e) => {
-    const { name, files } = e.target;
-    if (name === "images") {
-      setSelectedFiles({
-        ...selectedFiles,
-        [name]: [...files],
-      });
+    const files = Array.from(e.target.files);
+    setSelectedFiles(files);
+  };
+
+  const handleMainImageChange = (e) => {
+    const file = e.target.files[0];
+    if (
+      file &&
+      ["image/png", "image/jpg", "image/jpeg", "image/gif"].includes(file.type)
+    ) {
+      setMainImage(file);
     } else {
-      setSelectedFiles({
-        ...selectedFiles,
-        [name]: files[0],
-      });
+      console.error("Unsupported file format");
     }
   };
 
@@ -70,29 +77,46 @@ const OwnersEdit = () => {
     e.preventDefault();
 
     try {
+      const token = sessionStorage.getItem("authToken");
       const formData = new FormData();
-      if (selectedFiles) {
-        formData.append("images", selectedFiles);
-      }
-      for (const key in propertyData) {
-        formData.append(key, propertyData[key]);
+
+      formData.append("description", propertyData.description);
+      formData.append("address", propertyData.address);
+      formData.append("location_link", propertyData.location_link);
+      formData.append("region", propertyData.region);
+      formData.append("price", propertyData.price);
+      formData.append("facilities", propertyData.facilities);
+      formData.append(
+        "shared_or_individual",
+        propertyData.shared_or_individual
+      );
+      formData.append("city", propertyData.city);
+      formData.append("no_of_tenants", propertyData.no_of_tenants);
+
+      if (Image) {
+        formData.append("main_image", Image);
       }
 
+      selectedFiles.forEach((images, index) => {
+        formData.append(`image[${index}]`, images);
+      });
+
       const response = await axios.put(
-        `http://localhost:8000/api/properties/${id}`,
+        `http://localhost:8000/api/accommodations/${id}`,
         formData,
         {
           headers: {
             "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${token}`,
           },
         }
       );
+
       console.log("Property updated successfully:", response.data);
     } catch (error) {
       console.error("Error updating property:", error);
     }
   };
-
   return (
     <>
       <meta charset="UTF-8" />
@@ -139,14 +163,14 @@ const OwnersEdit = () => {
           <input
             className={styles["main_imagee"]}
             type="file"
-            name="main_image"
-            onChange={handleFileChange}
+            onChange={handleMainImageChange}
           />
-          {selectedFiles.main_image && (
-            <p className={styles["main_ima"]}>
-              {" "}
-              {selectedFiles.main_image.name}
-            </p>
+          {mainImage && (
+            <img
+              src={URL.createObjectURL(mainImage)}
+              alt="Main Image"
+              className={styles["main-image"]}
+            />
           )}
         </div>
 
@@ -237,16 +261,18 @@ const OwnersEdit = () => {
               <input
                 className={styles["text"]}
                 type="file"
-                name="images"
                 multiple
                 onChange={handleFileChange}
               />
-              {selectedFiles.images.length > 0 && (
-                <p className={styles["teext"]}>
-                  Selected files:{" "}
-                  {selectedFiles.images.map((file) => file.name).join(", ")}
-                </p>
-              )}
+              {selectedFiles.image.length > 0 &&
+                selectedFiles.map((image, index) => (
+                  <img
+                    key={index}
+                    src={URL.createObjectURL(image)}
+                    alt={`Selected ${index}`}
+                    className={styles["teext"]}
+                  />
+                ))}
             </div>
             <span className={styles["text04"]}>
               Supports: PNG, JPG, JPEG, WEBP
