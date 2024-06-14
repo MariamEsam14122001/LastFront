@@ -7,37 +7,14 @@ import { useNavigate } from "react-router-dom";
 
 const Uploadform = () => {
   const navigate = useNavigate();
+  const governates = ["Alexandria", "Cairo", "Aswan"];
+  const regionsByGovernates = {
+    Alexandria: ["Seyouf", "San Stefano", "Louran", "Sidi Bishr"],
+    Cairo: ["Maadi", "Heliopolis", "Nasr City", "6th of October"],
+    Aswan: ["Daraw", "Edfu", "Abu Simbel"],
+  };
 
-  const cities = [
-    "Alexandria",
-    "Aswan",
-    "Asyut",
-    "Beheira",
-    "Beni Suef",
-    "Cairo",
-    "Dakahlia",
-    "Damietta",
-    "Faiyum",
-    "Gharbia",
-    "Giza",
-    "Ismailia",
-    "Kafr El Sheikh",
-    "Luxor",
-    "Matruh",
-    "Minya",
-    "Monufia",
-    "New Valley",
-    "North Sinai",
-    "Port Said",
-    "Qalyubia",
-    "Qena",
-    "Red Sea",
-    "Sharqia",
-    "Sohag",
-    "South Sinai",
-    "Suez",
-  ];
-
+  const [regions, setRegions] = useState([]);
   const [formData, setFormData] = useState({
     description: "",
     address: "",
@@ -46,7 +23,7 @@ const Uploadform = () => {
     price: "",
     facilities: "",
     shared_or_individual: "",
-    city: "",
+    governorate: "",
     no_of_tenants: "",
   });
 
@@ -57,24 +34,20 @@ const Uploadform = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [name]: value });
+
+    if (name === "governorate") {
+      setRegions(regionsByGovernates[value] || []);
+      setFormData({ ...formData, region: "", [name]: value });
+    }
   };
 
   const handleFileChange = (e) => {
     const { name, files } = e.target;
     if (name === "images") {
-      setSelectedFiles({
-        ...selectedFiles,
-        images: Array.from(files),
-      });
+      setSelectedFiles({ ...selectedFiles, images: Array.from(files) });
     } else {
-      setSelectedFiles({
-        ...selectedFiles,
-        [name]: files[0],
-      });
+      setSelectedFiles({ ...selectedFiles, [name]: files[0] });
     }
   };
 
@@ -87,15 +60,16 @@ const Uploadform = () => {
     });
 
     selectedFiles.images.forEach((file, index) => {
-      data.append(`images`, file);
+      data.append(`images[${index}]`, file);
     });
+
     if (selectedFiles.main_image) {
       data.append("main_image", selectedFiles.main_image);
     }
 
-    // Log FormData contents
+    // Log FormData contents for debugging
     for (let pair of data.entries()) {
-      console.log(`${pair[0]}, ${pair[1]}`);
+      console.log(`${pair[0]}: ${pair[1]}`);
     }
 
     const token = sessionStorage.getItem("authToken");
@@ -128,167 +102,165 @@ const Uploadform = () => {
 
   return (
     <>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <Welcome image={home} />
 
-      <form onSubmit={handleSubmit} className={styles["uploadform"]}>
+      <form onSubmit={handleSubmit} className={styles.uploadform}>
         <span className={styles["upload-your-image-text"]}>
           Upload Your Images
         </span>
 
-        <span className={styles["specstext"]}>Apartment Description :</span>
+        <span className={styles.specstext}>Apartment Description :</span>
         <input
           onChange={handleChange}
           name="description"
           value={formData.description}
           id="description"
           type="text"
-          className={styles["appartmentspecsinput"]}
+          className={styles.appartmentspecsinput}
         />
 
-        <span className={styles["addresstext"]}> Address :</span>
+        <span className={styles.addresstext}> Address :</span>
         <input
           onChange={handleChange}
           name="address"
           value={formData.address}
           id="address"
           type="text"
-          className={styles["appartmentaddressinput"]}
+          className={styles.appartmentaddressinput}
         />
 
-        <span className={styles["no_of_tenants"]}>No of Tenants :</span>
+        <span className={styles.no_of_tenants}>No of Tenants :</span>
         <input
           onChange={handleChange}
           name="no_of_tenants"
           value={formData.no_of_tenants}
           id="no_of_tenants"
           type="text"
-          className={styles["no_of_tenantsinput"]}
+          className={styles.no_of_tenantsinput}
         />
 
-        <span className={styles["main_image"]}>Main Image :</span>
+        <span className={styles.main_image}>Main Image :</span>
         <div>
           <input
-            className={styles["main_imagee"]}
+            className={styles.main_imagee}
             type="file"
             name="main_image"
             onChange={handleFileChange}
           />
           {selectedFiles.main_image && (
-            <p className={styles["main_ima"]}>
-              {" "}
-              {selectedFiles.main_image.name}
-            </p>
+            <p className={styles.main_ima}>{selectedFiles.main_image.name}</p>
           )}
         </div>
 
-        <span className={styles["locationtext"]}>Location Link :</span>
+        <span className={styles.locationtext}>Location Link :</span>
         <input
           onChange={handleChange}
           name="location_link"
           value={formData.location_link}
           id="location_link"
           type="text"
-          className={styles["locationinput"]}
+          className={styles.locationinput}
         />
 
-        <span className={styles["regiontext"]}>Region :</span>
-        <input
-          onChange={handleChange}
+        <span className={styles.regiontext}>Region :</span>
+        <select
           name="region"
           value={formData.region}
-          id="region"
-          type="text"
-          className={styles["regioninput"]}
-        />
+          onChange={handleChange}
+          className={styles.regioninput}
+        >
+          <option value="">Select Region</option>
+          {regions.map((region) => (
+            <option key={region} value={region}>
+              {region}
+            </option>
+          ))}
+        </select>
 
-        <span className={styles["rentaltext"]}>Rental Price :</span>
+        <span className={styles.rentaltext}>Rental Price :</span>
         <input
           onChange={handleChange}
           name="price"
           value={formData.price}
           id="price"
           type="text"
-          className={styles["rentalpriceinput"]}
+          className={styles.rentalpriceinput}
         />
 
-        <span className={styles["phonetext"]}>Facilities :</span>
+        <span className={styles.phonetext}>Facilities :</span>
         <input
           onChange={handleChange}
           name="facilities"
           value={formData.facilities}
           id="facilities"
           type="text"
-          className={styles["phonenumberinput"]}
+          className={styles.phonenumberinput}
         />
 
-        <span className={styles["ortext"]}>
-          Shared Or Individual Apartment?
-        </span>
-
+        <span className={styles.ortext}>Shared Or Individual Apartment?</span>
         <input
           onChange={handleChange}
           value="shared"
           id="shared"
           type="radio"
           name="shared_or_individual"
-          className={styles["sharedradio"]}
+          className={styles.sharedradio}
         />
-        <span className={styles["sharedtext"]}>Shared :</span>
+        <span className={styles.sharedtext}>Shared :</span>
         <input
           onChange={handleChange}
           value="individual"
           id="individual"
           type="radio"
           name="shared_or_individual"
-          className={styles["invidualradio"]}
+          className={styles.invidualradio}
         />
-        <span className={styles["invidualtext"]}>Individual :</span>
+        <span className={styles.invidualtext}>Individual :</span>
 
-        <span className={styles["governoratetext"]}> Governorate :</span>
+        <span className={styles.governoratetext}> Governorate :</span>
         <div>
-          <input
-            placeholder="select city"
-            className={styles["city"]}
-            type="text"
-            list="cities"
-            name="governorate" // Updated to match the backend field name
+          <select
+            name="governorate"
             value={formData.governorate}
             onChange={handleChange}
-          />
-          <datalist id="cities">
-            {cities.map((city) => (
-              <option key={city} value={city} />
+            className={styles.city}
+          >
+            <option value="">Select Governorate</option>
+            {governates.map((governorate) => (
+              <option key={governorate} value={governorate}>
+                {governorate}
+              </option>
             ))}
-          </datalist>
+          </select>
         </div>
 
-        <div className={styles["browse"]}>
-          <div className={styles["browseimage"]}>
+        <div className={styles.browse}>
+          <div className={styles.browseimage}>
             <div>
               <input
-                className={styles["text"]}
+                className={styles.text}
                 type="file"
                 name="images"
                 multiple
                 onChange={handleFileChange}
               />
               {selectedFiles.images.length > 0 && (
-                <p className={styles["teext"]}>
+                <p className={styles.teext}>
                   Selected files:{" "}
                   {selectedFiles.images.map((file) => file.name).join(", ")}
                 </p>
               )}
             </div>
-            <span className={styles["text04"]}>
+            <span className={styles.text04}>
               Supports: PNG, JPG, JPEG, WEBP
             </span>
           </div>
         </div>
 
-        <button type="submit" className={styles["donebutton"]}>
-          <span className={styles["text12"]}>Done</span>
+        <button type="submit" className={styles.donebutton}>
+          <span className={styles.text12}>Done</span>
         </button>
       </form>
     </>
