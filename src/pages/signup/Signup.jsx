@@ -61,7 +61,6 @@ const Signup = () => {
     "Birqash",
     "Kafr Tahlah",
   ];
-
   const where_to_go = ["", "Alexandria", "Cairo", "Aswan"];
   const status = ["", "employee", "student"];
   const { userType } = useParams();
