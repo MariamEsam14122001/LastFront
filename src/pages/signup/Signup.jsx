@@ -214,8 +214,8 @@ const Signup = () => {
               id="photo"
               className={styles["photo"]}
               name="photo"
-              value={formData.photo}
-              onChange={handleChange}
+              // value={formData.photo}
+              onChange={handleFileChange}
               accept="image/*"
             />
 
