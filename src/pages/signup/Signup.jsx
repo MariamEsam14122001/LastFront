@@ -144,7 +144,6 @@ const Signup = () => {
   const navigateToLoginPage = () => {
     navigate("/login");
   };
-
   return (
     <>
       <meta charset="UTF-8" />
@@ -261,7 +260,6 @@ const Signup = () => {
                     </option>
                   ))}
                 </select>
-
                 <span className={styles["stat"]}>Status</span>
                 <select
                   className={styles["status"]}

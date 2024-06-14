@@ -101,7 +101,7 @@ const Useform = () => {
           </div>
           <input
             onChange={handleChange}
-            name="name"
+            name="nameinput"
             value={formData.name}
             id="name"
             type="text"
