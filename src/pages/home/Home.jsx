@@ -28,8 +28,8 @@ const Home = () => {
     try {
       const token = sessionStorage.getItem("authToken");
       const response = await fetch(
-        //       //`http://localhost:8000/api/recommendation_system_output`,
-        `http://localhost:8000/api/accommodation/some`,
+        `http://localhost:8000/api/recommendation_system_output`,
+        // `http://localhost:8000/api/accommodation/some`,
         {
           method: "GET",
           headers: {
@@ -75,11 +75,20 @@ const Home = () => {
   //   }
   // };
 
+  const [searchResults, setSearchResults] = useState([]);
+
+  // Handle search functionality
   const handleSearch = async (params) => {
     try {
-      const response = await axios.get("/api/search", { params });
-      setSearchResults(response.data);
-      navigate("/search");
+      const response = await axios.get(
+        "http://localhost:8000/api/filtered-accommodations",
+        { params }
+      );
+
+      setSearchResults(response.data.accommodations || []);
+      navigate("/search", {
+        state: { searchResults: response.data.accommodations || [] },
+      });
     } catch (error) {
       console.error("Error searching:", error);
     }

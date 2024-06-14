@@ -1,44 +1,37 @@
 import React, { useState } from "react";
 import styles from "./searchBar.module.css";
-import axios from "axios";
 
 const SearchBar = ({ onSearch }) => {
-  const [searchType, setSearchType] = useState("");
-  const [city, setCity] = useState("");
   const [district, setDistrict] = useState("");
   const [price, setPrice] = useState("");
+  const [city, setCity] = useState("");
+  const [searchType, setSearchType] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const params = {
+      district: district || undefined,
+      price: price || undefined,
+      city: city || undefined,
+      searchType: searchType || undefined,
+    };
+    onSearch(params);
+  };
   const handleCityChange = (e) => {
     const selectedCity = e.target.value;
     setCity(selectedCity);
-    // Reset district when city changes
-    setDistrict("");
+    setDistrict(""); // Reset district when city changes
   };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.get("/api/search", {
-        params: { district, searchType, city, price },
-      });
-      onSearch(response.data);
-    } catch (error) {
-      console.error("Error searching:", error);
-    }
-  };
-
   const cities = ["Alexandria", "Cairo", "Aswan"];
   const districtsByCity = {
     Alexandria: ["Seyouf", "San Stefano", "Louran", "Sidi Bishr"],
-
     Cairo: ["Maadi", "Heliopolis", "Nasr City", "6th of October"],
-
     Aswan: ["Daraw", "Edfu", "Abu Simbel"],
   };
 
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <select
         className={styles.citySelect}

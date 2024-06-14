@@ -12,12 +12,12 @@ const Ownform = () => {
   };
 
   const [formData, setFormData] = useState({
-    nameinput: "",
-    emailinput: "",
-    passwordinput: "",
-    imageinput: null,
-    passwordinput2: "",
-    phoneinput: "",
+    name: "",
+    email: "",
+    password: "",
+    photo: null,
+    password2: "",
+    phone: "",
   });
 
   const [userId, setUserId] = useState(null);
@@ -59,14 +59,14 @@ const Ownform = () => {
       setPreviewUrl(URL.createObjectURL(file));
       setFormData({
         ...formData,
-        imageinput: file,
+        photo: file,
       });
     }
   };
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === "imageinput" && files.length > 0) {
+    if (name === "photo" && files.length > 0) {
       setFormData({
         ...formData,
         [name]: files[0],
@@ -81,7 +81,7 @@ const Ownform = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.passwordinput !== formData.passwordinput2) {
+    if (formData.password !== formData.password2) {
       alert("Passwords do not match!");
       return;
     }
@@ -96,13 +96,13 @@ const Ownform = () => {
     console.log("Submitting form with token:", csrfToken);
 
     const formDataToSend = new FormData();
-    formDataToSend.append("nameinput", formData.nameinput);
-    formDataToSend.append("emailinput", formData.emailinput);
-    formDataToSend.append("passwordinput", formData.passwordinput);
-    if (formData.imageinput) {
-      formDataToSend.append("imageinput", formData.imageinput);
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("password", formData.password);
+    if (formData.photo) {
+      formDataToSend.append("photo", formData.photo);
     }
-    formDataToSend.append("setting", formData.setting);
+    // formDataToSend.append("setting", formData.setting);
     const token = sessionStorage.getItem("authToken");
 
     console.log("Authentication Token:", token);
@@ -140,9 +140,9 @@ const Ownform = () => {
           </div>
           <input
             onChange={handleChange}
-            name="nameinput"
-            value={formData.nameinput}
-            id="nameinput"
+            name="name"
+            value={formData.name}
+            id="name"
             type="text"
             className={styles["nameinput"]}
           />
@@ -153,9 +153,9 @@ const Ownform = () => {
 
           <input
             onChange={handleChange}
-            name="emailinput"
-            value={formData.emailinput}
-            id="emailinput"
+            name="email"
+            value={formData.email}
+            id="email"
             type="text"
             className={styles["emailinput"]}
           />
@@ -166,9 +166,9 @@ const Ownform = () => {
 
           <input
             onChange={handleChange}
-            name="passwordinput"
-            value={formData.passwordinput}
-            id="passwordinput"
+            name="password"
+            value={formData.password}
+            id="password"
             type="password"
             className={styles["passwordinput"]}
           />
@@ -177,9 +177,9 @@ const Ownform = () => {
 
           <input
             onChange={handleChange}
-            name="passwordinput2"
-            value={formData.passwordinput2}
-            id="passwordinput2"
+            name="password2"
+            value={formData.password2}
+            id="password2"
             type="password"
             className={styles["passwordinput2"]}
           />
@@ -188,16 +188,16 @@ const Ownform = () => {
 
           <input
             onChange={handleChange}
-            name="phoneinput"
-            value={formData.phoneinput}
-            id="phoneinput"
+            name="phone"
+            value={formData.phone}
+            id="phone"
             type="phone"
             className={styles["phoneinput"]}
           />
 
           <button
-            name="setting"
-            id="setting"
+            // name="setting"
+            // id="setting"
             type="submit"
             value={formData.setting}
             className={styles["button"]}
@@ -211,7 +211,7 @@ const Ownform = () => {
           </div>
           <input
             ref={fileInputRef}
-            name="imageinput"
+            name="photo"
             type="file"
             style={{ display: "none" }}
             onChange={handleFileChange}

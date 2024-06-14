@@ -5,12 +5,11 @@ import styles from "./items.module.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const Items = ({ accommodations = {}, likedItems = [], onToggleLike }) => {
-  const accommodationsArray = Object.values(accommodations);
-
-  if (!Array.isArray(accommodationsArray) || accommodationsArray.length === 0) {
+const Items = ({ accommodations = [], likedItems = [], onToggleLike }) => {
+  if (!Array.isArray(accommodations) || accommodations.length === 0) {
     return <p>No accommodations found.</p>;
   }
+
   return (
     <div className={styles["card-container"]}>
       <div className="row  row-cols-md-3 g-3">
@@ -30,7 +29,6 @@ const Items = ({ accommodations = {}, likedItems = [], onToggleLike }) => {
               shared_or_individual={accommodation.shared_or_individual}
               isLiked={likedItems.includes(accommodation.id)}
               onToggleLike={() => onToggleLike(accommodation.id)}
-              onClick={() => handleItemClick(accommodation.id)}
             />
           </Link>
         ))}
@@ -40,13 +38,12 @@ const Items = ({ accommodations = {}, likedItems = [], onToggleLike }) => {
 };
 
 Items.propTypes = {
-  accommodations: PropTypes.array.isRequired,
-  likedItems: PropTypes.array.isRequired,
-  onToggleLike: PropTypes.func.isRequired,
+  accommodations: PropTypes.array,
+  likedItems: PropTypes.array,
+  onToggleLike: PropTypes.func,
 };
 
 export default Items;
-
 // const Items = ({ accommodations, onItemSelect, likedItems, onToggleLike }) => {
 //   return (
 //     <div className={styles["card-container"]}>
