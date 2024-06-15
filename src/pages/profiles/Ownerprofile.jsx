@@ -68,7 +68,9 @@ const Ownerform = () => {
           <div className={styles["Phone"]}>
             <span className={styles["Phone1"]}>Phone :</span>
           </div>
-          <p className={styles["Phoneinput"]}>{ownerData?.phone}</p>
+          <p className={styles["Phoneinput"]} type="tel">
+            {ownerData?.phone}
+          </p>
 
           <Link to="/Owneraccount">
             <button
@@ -101,7 +103,7 @@ const Ownerform = () => {
               type="button"
               className={styles["button3"]}
             >
-              <span className={styles["acccountsetting"]}>Properities</span>
+              <span className={styles["accccountsetting"]}>Properities</span>
             </button>
           </Link>
           <div className={styles["logout"]}>

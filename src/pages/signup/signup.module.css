@@ -8,18 +8,20 @@
 }
 
 .component1 {
-  top: 3.8125rem; /* 61px / 16 */
-  left: 1.875rem; /* 30px / 16 */
+  top: 0.5rem; /* 61px / 16 */
+  left: 0.5rem; /* 30px / 16 */
   width: 40.625rem; /* 650px / 16 */
-  height: 56.25rem; /* 900px / 16 */
+  height: 57.25rem; /* 900px / 16 */
   display: flex;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  border-color: #3aa6b9;
-  border-width: 0.0625rem; /* 1px / 16 */
-  border-radius: 6.25rem; /* 100px / 16 */
-  background-color: #c1ece4;
+  border-color: #0c1844;
+  border-style: solid;
+  border-width: 0.25rem; /* 1px / 16 */
+  border-radius: 1.875rem; /* 100px / 16 */
+  background-color: #fff5e1;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .frameusersignup {
@@ -173,7 +175,7 @@
 }
 
 .text14 {
-  top: 18.8125rem; /* 301px / 16 */
+  top: 19.3125rem; /* 301px / 16 */
   left: 15.9375rem; /* 255px / 16 */
   color: black;
   width: 10.375rem; /* 166px / 16 */
@@ -190,11 +192,12 @@
 }
 
 .photo {
-  top: 20.6875rem; /* 331px / 16 */
+  top: 21.1875rem; /* 331px / 16 */
   left: 15.1875rem; /* 243px / 16 */
   width: 13.8125rem; /* 221px / 16 */
   height: 2.5rem; /* 40px / 16 */
   position: absolute;
+  border-style: none;
 }
 
 .gend {
@@ -349,14 +352,18 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: #3aa6b9;
+  background-color: #0c1844;
   border-radius: 1.25rem; /* 20px / 16 */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.button:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
+}
 .create-account {
   top: 0.3125rem; /* 5px / 16 */
   left: 8.8125rem; /* 141px / 16 */
-  color: black;
+  color: white;
   width: 10.5rem; /* 168px / 16 */
   height: auto;
   position: absolute;

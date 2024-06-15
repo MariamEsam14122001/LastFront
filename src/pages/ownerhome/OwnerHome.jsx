@@ -55,7 +55,7 @@ const Owner = () => {
           Authorization: `Bearer ${token}`,
         },
       });
-      setItems(items.filter((item) => item.id !== itemId));
+      setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
     } catch (error) {
       setError(
         "Error deleting item: " +
@@ -63,9 +63,10 @@ const Owner = () => {
       );
     }
   };
+
   return (
     <div>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <OwnerHeader />
       <HeadOwner />

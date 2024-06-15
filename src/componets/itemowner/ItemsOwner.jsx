@@ -20,8 +20,9 @@ const ItemsOwner = ({ accommodations = [], onDelete }) => {
               title={accommodation.description}
               price={accommodation.price}
               location={accommodation.address}
+              region={accommodation.region}
               image={`http://localhost:8000/storage/${accommodation.main_image}`}
-              onDelete={() => onDelete(accommodation.id)}
+              onDelete={onDelete}
             />
           </Link>
         ))}

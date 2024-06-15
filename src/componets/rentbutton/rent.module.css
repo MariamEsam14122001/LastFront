@@ -33,45 +33,53 @@
 }
 
 .popup button {
-  color: whitesmoke;
+  color: white;
   text-decoration: none;
-  background-color: crimson;
+  background-color: #0c1844;
   cursor: pointer;
-  border-radius: 1.25rem; /* 20px */
+  border-color: #0c1844;
+  border-radius: 2rem; /* 20px */
   border-style: solid;
-  padding: 0.3125rem; /* 5px */
+  padding: 0.5rem; /* 5px */
   margin-left: 6.875rem; /* 110px */
   margin-top: 3.125rem; /* 50px */
-  font-weight: 700;
+  font-weight: 600;
   top: 13.75rem; /* 220px */
   position: absolute;
 }
-
+.popup button:hover {
+  background-color: #0c184467;
+}
 .popup a:hover {
   text-decoration: underline;
 }
 
 .rent {
   cursor: pointer;
-  border-radius: 1.25rem; /* 20px */
+  border-radius: 2rem; /* 20px */
   border-style: solid;
   padding: 0.5rem; /* 8px */
-  color: whitesmoke;
-  background-color: blue;
+  color: white;
+  background-color: #0c1844;
+  border-color: #0c1844;
   margin-left: 6.875rem; /* 110px */
   margin-top: 3.125rem; /* 50px */
-  font-weight: 1000;
+  font-weight: 800;
   width: 9.375rem; /* 150px */
-  font-size: large;
+  font-size: medium;
   position: absolute;
   top: 51.25rem; /* 820px */
   left: 71.875rem; /* 1150px */
 }
+.rent:hover {
+  background-color: #0c184467;
+}
 
 .img {
   position: absolute;
-  color: crimson;
-  top: 1.875rem; /* 30px */
+  color: #c80036;
+  font-weight: 700;
+  top: 2rem; /* 30px */
 }
 
 .browseimage {
@@ -82,36 +90,38 @@
 
 .text {
   position: absolute;
-  color: crimson;
+  color: gray;
   top: 3.75rem; /* 60px */
 }
 
 .ReferenceNumber {
   position: absolute;
-  color: crimson;
-  top: 6.25rem; /* 100px */
+  color: #c80036;
+  font-weight: 700;
+  top: 7rem; /* 100px */
 }
 
 .Enterreferencenumber {
   position: absolute;
   color: #000;
-  top: 8.125rem; /* 130px */
+  top: 8.5rem; /* 130px */
 }
 
 .EndDate {
   position: absolute;
-  color: crimson;
-  top: 10rem; /* 160px */
+  color: #c80036;
+  font-weight: 700;
+  top: 12rem; /* 160px */
 }
 
 .dateinput {
   position: absolute;
   color: #000;
-  top: 11.875rem; /* 190px */
+  top: 13.5rem; /* 190px */
 }
 
 .WhatsApp {
-  color: whitesmoke;
+  color: white;
   text-decoration: none;
   background-color: green;
   cursor: pointer;

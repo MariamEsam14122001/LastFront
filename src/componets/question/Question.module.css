@@ -2,16 +2,17 @@
   border: 0.0625rem solid #ccc; /* 1px / 16 */
   padding: 0.625rem; /* 10px / 16 */
   margin-bottom: 0.625rem; /* 10px / 16 */
-  left: 3.125rem; /* 50px / 16 */
+  left: 2.5rem; /* 50px / 16 */
   position: relative;
-  top: 6.25rem; /* 100px / 16 */
+  top: 1.25rem; /* 100px / 16 */
   width: 76.875rem; /* 1230px / 16 */
-  background-color: rgba(0, 191, 255, 0.356);
+  background-color: #fff5e1;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 .question {
   font-weight: bold;
-  color: darkblue;
+  color: #0c1844;
   background-image: url("../top.png");
   background-position: left;
   background-position-x: 0.625rem; /* 10px / 16 */
@@ -45,5 +46,5 @@
 
 .foot {
   position: relative;
-  top: 25rem;
+  top: 13rem;
 }

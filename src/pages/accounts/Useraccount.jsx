@@ -3,11 +3,15 @@ import styles from "./useraccount.module.css";
 import Header from "../../componets/header/Header.jsx";
 import Footer from "../../componets/footer/Footer.jsx";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUserProfile } from "../../redux/authSlice";
 import axios from "axios";
 
 const Useform = () => {
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleBrowseClick = () => {
     fileInputRef.current.click();
   };
@@ -49,10 +53,12 @@ const Useform = () => {
     if (userProfile) {
       const parsedProfile = JSON.parse(userProfile);
       setUserId(parsedProfile.id);
+      setFormData(parsedProfile); // Pre-fill the form with existing user data
     } else {
       console.error("User profile not found in sessionStorage");
     }
   }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -63,42 +69,51 @@ const Useform = () => {
       age: formData.age,
       gender: formData.gender,
       password: formData.password,
+      // photo: null,
     };
-
     if (selectedFiles) {
       const reader = new FileReader();
-      reader.onload = async () => {
+      reader.onload = () => {
         const base64String = reader.result;
         data.photo = base64String;
-
-        const queryString = Object.keys(data)
-          .map((key) => `${key}=${encodeURIComponent(data[key])}`)
-          .join("&");
-
-        const token = sessionStorage.getItem("authToken");
-        try {
-          const response = await axios.put(
-            `http://localhost:8000/api/user/profile/${userId}/update`,
-            queryString,
-            {
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                Authorization: `Bearer ${token}`,
-              },
-            }
-          );
-          console.log("Successful:", response.data);
-        } catch (error) {
-          console.error("Failed:", error);
-        }
+        updateProfile(data);
       };
       reader.readAsDataURL(selectedFiles);
     } else {
-      // Handle case where no file is selected
-      console.error("No file selected.");
+      updateProfile(data);
     }
   };
 
+  const updateProfile = async (data) => {
+    const queryString = Object.keys(data)
+      .map((key) => `${key}=${encodeURIComponent(data[key])}`)
+      .join("&");
+
+    const token = sessionStorage.getItem("authToken");
+    try {
+      const response = await axios.put(
+        `http://localhost:8000/api/user/profile/${userId}/update`,
+        queryString,
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      const updatedUser = response.data.user;
+      console.log("Update successful:", updatedUser);
+
+      dispatch(setUserProfile(updatedUser));
+
+      sessionStorage.setItem("userProfile", JSON.stringify(updatedUser));
+
+      navigate("/userform");
+    } catch (error) {
+      console.error("Update failed:", error);
+    }
+  };
   return (
     <>
       <meta charset="UTF-8" />
@@ -107,6 +122,7 @@ const Useform = () => {
       <Header />
       <form onSubmit={handleSubmit}>
         <div className={styles["form"]}>
+          <div className={styles["space"]}></div>
           <span className={styles["userprofile"]}>Account Setting</span>
           <div className={styles["full-name"]}>
             <span className={styles["name"]}>Name :</span>
@@ -141,17 +157,6 @@ const Useform = () => {
             type="password"
             className={styles["passwordinput"]}
           />
-          {/* <div className={styles["passwordd"]}>
-            <span className={styles["password2"]}>Confirm Password :</span>
-          </div>
-          <input
-            onChange={handleChange}
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            id="confirmPassword"
-            type="password"
-            className={styles["passwordinput2"]}
-          /> */}
           <div>
             <span className={styles["status"]}>Status :</span>
           </div>
@@ -211,11 +216,6 @@ const Useform = () => {
             onChange={handleFileChange}
           />
           {selectedFiles && (
-            <p className={styles["teext"]}>
-              Selected file: {selectedFiles.name}
-            </p>
-          )}
-          {previewUrl && (
             <div className={styles["image-preview"]}>
               <img
                 src={previewUrl}

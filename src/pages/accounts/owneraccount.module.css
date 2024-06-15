@@ -1,21 +1,22 @@
 .form {
-  top: 45rem; /* 400px converted to rem */
+  top: 2rem; /* 400px converted to rem */
   left: 18.75rem; /* 300px converted to rem */
   width: 43.75rem; /* 700px converted to rem */
-  height: 40.625rem; /* 650px converted to rem */
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(172, 233, 252, 0.548);
+  height: 54.625rem; /* 650px converted to rem */
+
+  position: relative;
+
+  background-color: #fff5e1;
   border: solid;
-  border-radius: 6.25rem; /* 100px converted to rem */
-  border-color: rgb(9, 192, 248);
+  border-width: 0.25rem; /* 1px / 16 */
+  border-radius: 1.875rem; /* 100px / 16 */
+  border-color: #0c1844;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .userprofile {
-  top: 4.1875rem; /* 67px converted to rem */
-  left: 7.9375rem; /* 127px converted to rem */
+  top: 1.1875rem; /* 67px converted to rem */
+  left: 13.9375rem; /* 127px converted to rem */
   color: black;
   width: 19.9375rem; /* 319px converted to rem */
   height: auto;
@@ -31,14 +32,12 @@
 }
 
 .full-name {
-  top: 8.5625rem; /* 137px converted to rem */
+  top: 21.5625rem; /* 137px converted to rem */
   left: 8.6875rem; /* 139px converted to rem */
   width: 7.375rem; /* 118px converted to rem */
   height: 1.875rem; /* 30px converted to rem */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
 .name {
@@ -48,23 +47,21 @@
   position: absolute;
   font-size: 1.25rem; /* 20px converted to rem */
   font-style: Medium;
-  text-align: left;
+
   font-family: "Poppins";
   font-weight: 500;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
 }
 
 .email-address {
-  top: 13.625rem; /* 218px converted to rem */
+  top: 26.625rem; /* 218px converted to rem */
   left: 8.625rem; /* 138px converted to rem */
   width: 9.5625rem; /* 153px converted to rem */
   height: 1.875rem; /* 30px converted to rem */
   display: flex;
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
 .email {
@@ -77,20 +74,18 @@
   text-align: left;
   font-family: "Poppins";
   font-weight: 500;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
 }
 
 .password {
-  top: 18.625rem; /* 298px converted to rem */
+  top: 31.625rem; /* 298px converted to rem */
   left: 8.625rem; /* 138px converted to rem */
   width: 7.4375rem; /* 119px converted to rem */
   height: 6.25rem; /* 100px converted to rem */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
 .password1 {
@@ -103,19 +98,18 @@
   text-align: left;
   font-family: "Poppins";
   font-weight: 500;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
 }
 
 .password2 {
-  top: 23.4375rem; /* 375px converted to rem */
+  top: 36.4375rem; /* 375px converted to rem */
   left: 8.625rem; /* 138px converted to rem */
   width: 18.75rem; /* 300px converted to rem */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
+
   color: black;
   height: auto;
   font-size: 1.25rem; /* 20px converted to rem */
@@ -129,7 +123,7 @@
 }
 
 .passwordinput2 {
-  top: 25.3125rem; /* 405px converted to rem */
+  top: 38.3125rem; /* 405px converted to rem */
   left: 7.9375rem; /* 127px converted to rem */
   width: 29rem; /* 464px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
@@ -141,7 +135,7 @@
 }
 
 .phone1 {
-  top: 28.25rem; /* 452px converted to rem */
+  top: 41.25rem; /* 452px converted to rem */
   left: 8.625rem; /* 138px converted to rem */
   width: 7.4375rem; /* 119px converted to rem */
   height: 6.25rem; /* 100px converted to rem */
@@ -161,7 +155,7 @@
 }
 
 .phoneinput {
-  top: 30.125rem; /* 482px converted to rem */
+  top: 43.125rem; /* 482px converted to rem */
   left: 7.9375rem; /* 127px converted to rem */
   width: 29rem; /* 464px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
@@ -173,26 +167,33 @@
 }
 
 .button {
-  top: 34.375rem; /* 550px converted to rem */
+  top: 47.375rem; /* 550px converted to rem */
   left: 7.9375rem; /* 127px converted to rem */
   width: 12.5rem; /* 200px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
   cursor: pointer;
   position: absolute;
-  background-color: rgba(9, 192, 248, 0.507);
+  background-color: #0c1844;
+  border-style: solid;
+  border-color: #0c1844;
   border-radius: 1.25rem; /* 20px converted to rem */
   font-size: 1.25rem; /* 20px converted to rem */
   text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.button:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
+}
 .change {
   text-align: center;
   font-style: bold;
   left: 1.25rem; /* 20px converted to rem */
+  color: white;
 }
 
 .nameinput {
-  top: 10.4375rem; /* 167px converted to rem */
+  top: 23.4375rem; /* 167px converted to rem */
   left: 7.9375rem; /* 127px converted to rem */
   width: 29rem; /* 464px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
@@ -204,7 +205,7 @@
 }
 
 .emailinput {
-  top: 15.8125rem; /* 253px converted to rem */
+  top: 28.8125rem; /* 253px converted to rem */
   left: 7.9375rem; /* 127px converted to rem */
   width: 29rem; /* 464px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
@@ -216,7 +217,7 @@
 }
 
 .passwordinput {
-  top: 20.5rem; /* 328px converted to rem */
+  top: 33.5rem; /* 328px converted to rem */
   left: 7.9375rem; /* 127px converted to rem */
   width: 29rem; /* 464px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
@@ -230,42 +231,60 @@
 .upload-container {
   position: relative;
 }
+.space {
+  position: absolute;
+  border: 0.15rem;
+  border-style: dashed;
+  border-color: gray;
+  border-radius: 1rem;
+  top: 5rem;
+  left: 11.6rem;
+  width: 20rem;
+  height: 15rem;
+}
 
 .browse-button {
-  color: black;
+  color: white;
   text-align: center;
   cursor: pointer;
-  top: 71.25rem; /* 820px converted to rem */
+  top: -5rem; /* 820px converted to rem */
   border-style: solid;
   border-width: 0.125rem; /* 2px converted to rem */
-  border-color: black;
+  border-color: #0c1844;
   border-radius: 1.25rem; /* 20px converted to rem */
-  position: absolute;
+  position: relative;
   width: 12.5rem; /* 200px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
   left: 41.875rem; /* 670px converted to rem */
   font-size: 1.25rem; /* 20px converted to rem */
-  background-color: rgba(9, 192, 248, 0.507);
+  background-color: #0c1844;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.browse-button:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
 }
 
 .teext {
   position: absolute;
-  top: 28.125rem; /* 450px converted to rem */
+  top: 41.125rem; /* 450px converted to rem */
   left: 71.875rem; /* 1150px converted to rem */
   color: white;
 }
 
 .foot {
   position: relative;
-  top: 105rem;
+  top: 13rem;
 }
 .image-preview {
-  margin-top: 1rem;
+  margin-top: -50rem;
   text-align: center;
 }
 
 .image-preview-img {
   width: 20rem;
-  height: 27rem;
+  position: relative;
+  height: 15rem;
   border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }

@@ -15,10 +15,12 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  border-color: #3aa6b9;
-  border-width: 0.0625rem; /* 1px */
-  border-radius: 3.125rem; /* 50px */
-  background-color: #c1ece4;
+  border-color: #0c1844;
+  border-width: 0.25rem; /* 1px */
+  border-radius: 1.875rem; /* 100px / 16 */
+  border-style: solid;
+  background-color: #fff5e1;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 .frameusersignup {
   top: 1.0625rem; /* 17px */
@@ -125,13 +127,19 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: #3aa6b9;
+  background-color: #0c1844;
   border-radius: 1.25rem; /* 20px */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button:hover {
+  background-color: #0c184467;
+
+  transform: scale(1.05);
 }
 .login {
   top: 0.3125rem; /* 5px */
   left: 8.8125rem; /* 141px */
-  color: black;
+  color: white;
   width: 10.5rem; /* 168px */
   height: auto;
   position: absolute;
@@ -146,7 +154,7 @@
 }
 
 .do {
-  top: 31.25rem; /* 500px */
+  top: 31.75rem; /* 500px */
   left: 7.6875rem; /* 123px */
   color: black;
   width: 9.375rem; /* 150px */
@@ -163,9 +171,9 @@
 }
 
 .signup {
-  top: 31.25rem; /* 500px */
-  left: 17.0625rem; /* 271px */
-  color: #3aa6b9;
+  top: 31.75rem; /* 500px */
+  left: 18.0625rem; /* 271px */
+  color: #0c1844;
   height: auto;
   position: absolute;
   font-size: 0.875rem; /* 14px */
@@ -181,7 +189,7 @@
 .home {
   top: 34.375rem; /* 550px */
   left: 12.5rem; /* 200px */
-  color: #3aa6b9;
+  color: #0c1844;
   height: auto;
   position: absolute;
   font-size: 1.25rem; /* 20px */

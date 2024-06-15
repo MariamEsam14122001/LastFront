@@ -5,7 +5,7 @@
   height: 4.375rem; /* 70px */
   width: 100%;
   z-index: 1000;
-  background-color: #3aa6b9;
+  background-color: #0c1844;
   border-radius: 0;
   border-color: white;
   border-style: solid;
@@ -13,7 +13,7 @@
 
 .sidebar {
   /* Sidebar styles */
-  background-color: #3aa6b9;
+  background-color: #0c1844;
   color: white;
   border-style: solid;
   border: none;
@@ -28,7 +28,7 @@
 
 .button {
   color: white;
-  background-color: #3aa6b9;
+  background-color: #0c1844;
   font-size: 1.25rem; /* large */
   font-weight: 800;
   border: none;
@@ -40,18 +40,26 @@
   margin-left: -2.5rem; /* -40px */
   background-size: 1.875rem; /* 30px */
   width: 14.375rem; /* 230px */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
 }
 
 .buttonchild {
   color: white;
-  background-color: #3aa6b9;
-  font-size: 0.9375rem; /* small */
-  font-weight: 800;
+  background-color: #0c1844;
+  font-size: 0.8rem; /* small */
+  font-weight: 700;
   border: none;
   margin-top: 0.625rem; /* 10px */
   padding: 1.25rem; /* 20px */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.buttonchild:hover {
+  transform: scale(1.05);
+}
 .button1 {
   margin-top: 3.125rem; /* 50px */
   background-image: url("../../pages/dashboard/pictures/m.png");
@@ -60,11 +68,14 @@
   width: 14.375rem; /* 230px */
   font-size: 1.25rem; /* large */
   text-align: center;
-  background-color: #3aa6b9;
+  background-color: #0c1844;
   position: relative;
   color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.button1:hover {
+  transform: scale(1.05);
+}
 .button2 {
   margin-top: 3.125rem; /* 50px */
   background-repeat: no-repeat;
@@ -73,9 +84,13 @@
   font-size: 1.25rem; /* large */
   text-align: center;
   background-image: url("../../pages/dashboard/pictures/p.png");
-  background-color: #3aa6b9;
+  background-color: #0c1844;
   position: relative;
   color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button2:hover {
+  transform: scale(1.05);
 }
 
 .line {

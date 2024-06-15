@@ -1,11 +1,12 @@
 /* Header Styles */
 header {
-  background-color: #3aa6b9;
+  /*background-color: #0c1844;*/
   padding: 0.625rem 0; /* 10px converted to rem */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  background: linear-gradient(135deg, #0c1844, #c80036);
 }
 
 .logo {

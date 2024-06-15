@@ -15,18 +15,16 @@ const OwnersEdit = () => {
     description: "",
     address: "",
     location_link: "",
+    governorate: "",
     region: "",
     price: "",
     facilities: "",
     shared_or_individual: "",
-    city: "",
     no_of_tenants: "",
   });
 
-  const [mainImage, setMainImage] = useState({ main_image: null });
-  const [selectedFiles, setSelectedFiles] = useState({
-    image: [],
-  });
+  const [mainImage, setMainImage] = useState(null);
+  const [selectedFiles, setSelectedFiles] = useState([]);
 
   useEffect(() => {
     fetchPropertyData();
@@ -48,6 +46,7 @@ const OwnersEdit = () => {
       console.error("Error fetching property data:", error);
     }
   };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPropertyData({
@@ -60,56 +59,57 @@ const OwnersEdit = () => {
     const files = Array.from(e.target.files);
     setSelectedFiles(files);
   };
-
   const handleMainImageChange = (e) => {
-    const file = e.target.files[0];
-    if (
-      file &&
-      ["image/png", "image/jpg", "image/jpeg", "image/gif"].includes(file.type)
-    ) {
-      setMainImage(file);
-    } else {
-      console.error("Unsupported file format");
-    }
+    setMainImage(e.target.files[0]);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    Object.keys(propertyData).forEach((key) => {
+      formData.append(key, propertyData[key]);
+    });
+
+    if (selectedFiles.main_image) {
+      data.append("main_image", selectedFiles.main_image);
+    }
+
+    // Append selected files if they exist
+    selectedFiles.forEach((image, index) => {
+      formData.append(`images[${index}]`, image, image.name);
+    });
 
     try {
       const token = sessionStorage.getItem("authToken");
-      const formData = new FormData();
-
-      formData.append("description", propertyData.description);
-      formData.append("address", propertyData.address);
-      formData.append("location_link", propertyData.location_link);
-      formData.append("region", propertyData.region);
-      formData.append("price", propertyData.price);
-      formData.append("facilities", propertyData.facilities);
-      formData.append(
+      const urlEncodedData = new URLSearchParams();
+      urlEncodedData.append("description", propertyData.description);
+      urlEncodedData.append("address", propertyData.address);
+      urlEncodedData.append("location_link", propertyData.location_link);
+      urlEncodedData.append("region", propertyData.region);
+      urlEncodedData.append("price", propertyData.price);
+      urlEncodedData.append("facilities", propertyData.facilities);
+      urlEncodedData.append(
         "shared_or_individual",
         propertyData.shared_or_individual
       );
-      formData.append("city", propertyData.city);
-      formData.append("no_of_tenants", propertyData.no_of_tenants);
+      urlEncodedData.append("governorate", propertyData.governorate);
+      urlEncodedData.append("no_of_tenants", propertyData.no_of_tenants);
 
-      if (Image) {
-        formData.append("main_image", Image);
-      }
-
-      selectedFiles.forEach((images, index) => {
-        formData.append(`image[${index}]`, images);
+      let config = {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      formData.forEach((value, key) => {
+        urlEncodedData.append(key, value);
       });
 
+      // Send combined data in request body
       const response = await axios.put(
         `http://localhost:8000/api/accommodations/${id}`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${token}`,
-          },
-        }
+        urlEncodedData.toString(),
+        config
       );
 
       console.log("Property updated successfully:", response.data);
@@ -117,6 +117,7 @@ const OwnersEdit = () => {
       console.error("Error updating property:", error);
     }
   };
+
   return (
     <>
       <meta charset="UTF-8" />

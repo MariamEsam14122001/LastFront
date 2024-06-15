@@ -2,9 +2,9 @@
   justify-content: space-between;
 
   padding: 1rem;
-  border: 0.0625rem solid #ccc;
+  border: 0.0625rem solid #c80036;
   border-radius: 0.5rem;
-  background-color: #f9f9f9;
+  background-color: #c80036;
   width: 100%;
   height: 5rem;
 }
@@ -56,21 +56,23 @@
 
 .searchButton {
   padding: 0.5rem 1.5rem;
-  border-color: #f9f9f9;
+  border-color: #0c1844;
   border-style: solid;
-  border-radius: 1rem;
-  background-color: #3aa6b9;
+  border-radius: 2rem;
+  background-color: #0c1844;
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  width: 15rem;
+  width: 8rem;
   height: 2.5rem;
   position: absolute;
   text-align: center;
-  left: 65.5rem;
+  left: 68.5rem;
   top: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .searchButton:hover {
-  background-color: #c1ece4;
+  background-color: rgb(176, 191, 218);
+  transform: scale(1.05);
 }

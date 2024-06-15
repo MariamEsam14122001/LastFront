@@ -16,7 +16,6 @@ const Ownform = () => {
     email: "",
     password: "",
     photo: null,
-    password2: "",
     phone: "",
   });
 
@@ -134,6 +133,7 @@ const Ownform = () => {
       <Header />
       <form onSubmit={handleSubmit}>
         <div className={styles["form"]}>
+          <div className={styles["space"]}></div>
           <span className={styles["userprofile"]}>Account setting</span>
           <div className={styles["full-name"]}>
             <span className={styles["name"]}>Name :</span>
@@ -171,17 +171,6 @@ const Ownform = () => {
             id="password"
             type="password"
             className={styles["passwordinput"]}
-          />
-
-          <span className={styles["password2"]}>Confirm Password :</span>
-
-          <input
-            onChange={handleChange}
-            name="password2"
-            value={formData.password2}
-            id="password2"
-            type="password"
-            className={styles["passwordinput2"]}
           />
 
           <span className={styles["phone1"]}>phone :</span>

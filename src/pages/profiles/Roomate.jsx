@@ -12,7 +12,6 @@ const Roommatte = () => {
     age: "",
     city: "",
     phone: "",
-    photoUrl: "", // Add photoUrl state to store the URL of the user's photo
   });
 
   useEffect(() => {
@@ -34,14 +33,6 @@ const Roommatte = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <Header />
-        {/* Display user's photo */}
-        {roommateData.photoUrl && (
-          <img
-            src={roommateData.photoUrl}
-            alt="photo"
-            className={styles["photo"]}
-          />
-        )}
       </div>
       <div>
         <div className={styles["form"]}>

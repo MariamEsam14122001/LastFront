@@ -107,18 +107,7 @@ const Contact = () => {
               </p>
             </div>
           )}
-          <button
-            onClick={toggleShowMore}
-            style={{
-              backgroundColor: "rgb(172, 233, 252)",
-              color: "black",
-              borderRadius: "20px",
-              left: "200px",
-              top: "0px",
-              position: "relative",
-              cursor: "pointer",
-            }}
-          >
+          <button onClick={toggleShowMore} className={styles["see"]}>
             {showMore ? "Show Less" : "Show More"}
           </button>
         </div>

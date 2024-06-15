@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-
-//import { Link } from "react-router-dom";
 import Header from "../../componets/header/Header.jsx";
+import OwnerHeader from "../../componets/header/OwnerHeader.jsx";
 import Footer from "../../componets/footer/Footer.jsx";
 import Question from "../../componets/question/Question";
 import styles from "../../componets/question/Question.module.css";
+import { useSelector } from "react-redux";
+
 const Support = () => {
+  const role = useSelector((state) => state.auth.role);
+
   const questions = [
     {
       question: "What is second home in second ?",
@@ -45,10 +48,11 @@ const Support = () => {
 
   return (
     <div>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <Header />
+      {role === "owner" ? <OwnerHeader /> : <Header />}
+
       <div>
         {questions.map((q, index) => (
           <Question

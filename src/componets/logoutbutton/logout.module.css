@@ -6,24 +6,26 @@
   justify-content: center;
   align-items: center;
   border-radius: 6.25rem; /* 100px converted to rem */
-  background-color: #ff9eaa; /* Sea Green */
+  background-color: #0c1844; /* Sea Green */
   color: #f9f9e0; /* White */
   font-size: 1.25rem; /* 20px converted to rem */
-  border-color: #3aa6b9;
+  border-color: #0c1844;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   position: absolute;
   bottom: 1.25rem; /* 20px converted to rem */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
-  background-color: #3aa6b9; /* Dodger Blue */
+  background-color: #0c184467;
+  transform: scale(1.05);
 }
 
 .logout {
   top: 0.3125rem; /* 5px converted to rem */
   left: 0.9375rem; /* 15px converted to rem */
-  color: #f9f9e0; /* White */
+  color: white; /* White */
   width: 10.5rem; /* 168px converted to rem */
   height: auto;
   position: absolute;

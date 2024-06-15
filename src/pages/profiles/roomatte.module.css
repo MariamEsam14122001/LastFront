@@ -1,16 +1,18 @@
 .form {
-  top: 25rem; /* 400px */
+  top: 1rem; /* 400px */
   left: 18.75rem; /* 300px */
   width: 46.25rem; /* 740px */
   height: 50rem; /* 800px */
   display: flex;
-  position: absolute;
+  position: relative;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: rgba(172, 233, 252, 0.548);
-  border-color: rgb(9, 192, 248);
+  background-color: #fff5e1;
+  border-color: #0c1844;
   border-style: solid;
-  border-radius: 6.25rem; /* 100px */
+  border-width: 0.25rem;
+  border-radius: 1.875rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .gender {
@@ -116,15 +118,20 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: rgba(9, 192, 248, 0.507);
+  background-color: #0c1844;
   border-radius: 1.25rem; /* 20px */
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
 }
 
 .accountsetting {
   top: 0.3125rem; /* 5px */
   left: 1.25rem; /* 20px */
-  color: black;
+  color: white;
   width: 10.5rem; /* 168px */
   height: auto;
   position: absolute;
@@ -203,5 +210,5 @@
 
 .foot {
   position: relative;
-  top: 85rem;
+  top: 15rem;
 }

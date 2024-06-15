@@ -1,21 +1,23 @@
 .form {
-  top: 25rem; /* 400px converted to rem */
+  top: 3rem; /* 400px converted to rem */
   left: 18.75rem; /* 300px converted to rem */
   width: 43.75rem; /* 700px converted to rem */
   height: 43.75rem; /* 700px converted to rem */
-  display: flex;
-  position: absolute;
-  border-radius: 6.25rem; /* 100px converted to rem */
+
+  position: relative;
+
   border-style: solid;
-  flex-shrink: 1;
-  background-color: rgba(172, 233, 252, 0.548);
-  border-color: rgb(9, 192, 248);
-  border-radius: 6.25rem; /* 100px converted to rem */
+
+  background-color: #fff5e1;
+  border-color: #0c1844;
+  border-width: 0.25rem; /* 1px / 16 */
+  border-radius: 1.875rem; /* 100px / 16 */
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .userprofile {
-  top: 4.1875rem; /* 67px converted to rem */
-  left: 7.9375rem; /* 127px converted to rem */
+  top: 4rem; /* 67px converted to rem */
+  left: 13.9375rem; /* 127px converted to rem */
   color: black;
   width: 19.9375rem; /* 319px converted to rem */
   height: auto;
@@ -25,20 +27,18 @@
   text-align: left;
   font-family: "Poppins";
   font-weight: 600;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
 }
 
 .full-name {
-  top: 8.5625rem; /* 137px converted to rem */
-  left: 8.6875rem; /* 139px converted to rem */
+  top: 8.6rem; /* 137px converted to rem */
+  left: 8.6rem; /* 139px converted to rem */
   width: 7.375rem; /* 118px converted to rem */
   height: 1.875rem; /* 30px converted to rem */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
 .name {
@@ -48,23 +48,21 @@
   position: absolute;
   font-size: 1.25rem; /* 20px converted to rem */
   font-style: Medium;
-  text-align: left;
+
   font-family: "Poppins";
   font-weight: 800;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
 }
 
 .email-address {
-  top: 13.625rem; /* 218px converted to rem */
-  left: 8.625rem; /* 138px converted to rem */
+  top: 13.6rem; /* 218px converted to rem */
+  left: 8.6rem; /* 138px converted to rem */
   width: 9.5625rem; /* 153px converted to rem */
   height: 1.875rem; /* 30px converted to rem */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
 .email {
@@ -74,10 +72,10 @@
   position: absolute;
   font-size: 1.25rem; /* 20px converted to rem */
   font-style: Medium;
-  text-align: left;
+
   font-family: "Poppins";
   font-weight: 800;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
 }
@@ -89,32 +87,24 @@
   position: absolute;
   font-size: 1.25rem; /* 20px converted to rem */
   font-style: Medium;
-  text-align: left;
+
   font-family: "Poppins";
   font-weight: 800;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
-}
-.Phoneinput {
-  top: 328px;
-  left: 127px;
-  width: 464px;
-  height: 40px;
-  position: absolute;
 }
 
 .Phone1 {
-  top: 18.625rem; /* 298px converted to rem */
-  left: 8.625rem; /* 138px converted to rem */
+  top: 18.6rem;
+  left: 8.6rem; /* 138px converted to rem */
   width: 7.4375rem; /* 119px converted to rem */
   height: 6.25rem; /* 100px converted to rem */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
+
   font-weight: 800;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
   font-family: "Poppins";
@@ -122,129 +112,86 @@
 
 .button {
   top: 28.125rem; /* 450px converted to rem */
-  left: 15.625rem; /* 250px converted to rem */
+  left: 4rem; /* 250px converted to rem */
   width: 12.5rem; /* 200px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
+
   border-radius: 1.875rem; /* 30px converted to rem */
-  background-color: rgba(9, 192, 248, 0.507);
+  background-color: #0c1844;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
 }
 
 .button2 {
   cursor: pointer;
-  top: 31.25rem; /* 500px converted to rem */
-  left: 12.5rem; /* 200px converted to rem */
-  width: 18.75rem; /* 300px converted to rem */
+  top: 28.125rem; /* 500px converted to rem */
+  left: 27rem; /* 200px converted to rem */
+  width: 12.5rem; /* 300px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  border-radius: 1.875rem; /* 30px converted to rem */
-  flex-shrink: 1;
-  background-color: rgba(9, 192, 248, 0.507);
-}
 
+  position: absolute;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  border-radius: 1.875rem; /* 30px converted to rem */
+
+  background-color: #0c1844;
+}
+.button2:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
+}
 .button3 {
   cursor: pointer;
   top: 34.375rem; /* 550px converted to rem */
-  left: 12.5rem; /* 200px converted to rem */
-  width: 18.75rem; /* 300px converted to rem */
+  left: 4rem; /* 200px converted to rem */
+  width: 12.5rem; /* 300px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
-  display: flex;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
   position: absolute;
   border-radius: 1.875rem; /* 30px converted to rem */
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(9, 192, 248, 0.507);
-}
 
+  background-color: #0c1844;
+}
+.button3:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
+}
 .logout {
   cursor: pointer;
-  top: 41.875rem; /* 670px converted to rem */
-  left: 15.625rem; /* 250px converted to rem */
-  display: flex;
+  top: 38.2rem;
+  left: 27rem;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
-.accountsetting {
+.accccountsetting {
   text-align: center;
-  color: black;
-  top: 0.3125rem; /* 5px converted to rem */
-  left: 0.9375rem; /* 15px converted to rem */
-  width: 10.5rem; /* 168px converted to rem */
+  color: white;
+  top: 0.3125rem;
+  left: 1rem;
+  width: 10.5rem;
   height: auto;
   position: absolute;
-  font-size: 1.25rem; /* 20px converted to rem */
+  font-size: 1.25rem;
   font-style: SemiBold;
-  text-align: center;
+
   font-family: "Poppins";
   font-weight: 600;
-  line-height: normal;
+
   font-stretch: normal;
   text-decoration: none;
 }
 
-.button {
-  top: 28.125rem; /* 450px converted to rem */
-  left: 15.625rem; /* 250px converted to rem */
-  width: 12.5rem; /* 200px converted to rem */
-  height: 2.5rem; /* 40px converted to rem */
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-radius: 1.875rem; /* 30px converted to rem */
-  background-color: rgba(9, 192, 248, 0.507);
-  cursor: pointer;
-}
-
-.button2 {
-  cursor: pointer;
-  top: 31.25rem; /* 500px converted to rem */
-  left: 12.5rem; /* 200px converted to rem */
-  width: 18.75rem; /* 300px converted to rem */
-  height: 2.5rem; /* 40px converted to rem */
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  border-radius: 1.875rem; /* 30px converted to rem */
-  flex-shrink: 1;
-  background-color: rgba(9, 192, 248, 0.507);
-}
-
-.button3 {
-  cursor: pointer;
-  top: 34.375rem; /* 550px converted to rem */
-  left: 12.5rem; /* 200px converted to rem */
-  width: 18.75rem; /* 300px converted to rem */
-  height: 2.5rem; /* 40px converted to rem */
-  display: flex;
-  position: absolute;
-  border-radius: 1.875rem; /* 30px converted to rem */
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(9, 192, 248, 0.507);
-}
-
-.logout {
-  cursor: pointer;
-  top: 41.875rem; /* 670px converted to rem */
-  left: 15.625rem; /* 250px converted to rem */
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
-
 .accountsetting {
   text-align: center;
-  color: black;
+  color: white;
   top: 0.3125rem; /* 5px converted to rem */
   left: 0.9375rem; /* 15px converted to rem */
   width: 10.5rem; /* 168px converted to rem */
@@ -262,9 +209,9 @@
 
 .acccountsetting {
   text-align: center;
-  color: black;
+  color: white;
   top: 0.3125rem; /* 5px converted to rem */
-  left: 4.375rem; /* 70px converted to rem */
+  left: 1rem; /* 70px converted to rem */
   width: 10.5rem; /* 168px converted to rem */
   height: auto;
   position: absolute;
@@ -279,53 +226,28 @@
 }
 
 .nameinput {
-  top: 10.4375rem; /* 167px converted to rem */
-  left: 7.9375rem; /* 127px converted to rem */
+  top: 10.5rem; /* 167px converted to rem */
+  left: 8.8rem; /* 127px converted to rem */
   width: 29rem; /* 464px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
   position: absolute;
 }
 
 .emailinput {
-  top: 15.8125rem; /* 253px converted to rem */
-  left: 7.9375rem; /* 127px converted to rem */
+  top: 15.5rem; /* 253px converted to rem */
+  left: 8.8rem; /* 127px converted to rem */
   width: 29rem; /* 464px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
   position: absolute;
 }
-
-.passwordinput {
-  top: 20.5rem; /* 328px converted to rem */
-  left: 7.9375rem; /* 127px converted to rem */
+.Phoneinput {
+  top: 20.5rem;
+  left: 8.8rem;
   width: 29rem; /* 464px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
   position: absolute;
 }
-.nameinput {
-  top: 10.4375rem; /* 167px converted to rem */
-  left: 7.9375rem; /* 127px converted to rem */
-  width: 29rem; /* 464px converted to rem */
-  height: 2.5rem; /* 40px converted to rem */
-  position: absolute;
-}
-
-.emailinput {
-  top: 15.8125rem; /* 253px converted to rem */
-  left: 7.9375rem; /* 127px converted to rem */
-  width: 29rem; /* 464px converted to rem */
-  height: 2.5rem; /* 40px converted to rem */
-  position: absolute;
-}
-
-.passwordinput {
-  top: 20.5rem; /* 328px converted to rem */
-  left: 7.9375rem; /* 127px converted to rem */
-  width: 29rem; /* 464px converted to rem */
-  height: 2.5rem; /* 40px converted to rem */
-  position: absolute;
-}
-
 .foot {
   position: relative;
-  top: 85rem;
+  top: 14rem;
 }

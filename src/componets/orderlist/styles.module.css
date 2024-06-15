@@ -24,7 +24,8 @@ body {
 }
 
 .orderlisttable th {
-  background-color: #f2f2f2;
+  background-color: #c80036;
+  color: white;
 }
 
 .orderlistimage {

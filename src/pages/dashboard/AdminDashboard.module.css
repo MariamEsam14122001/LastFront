@@ -13,13 +13,18 @@
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   cursor: pointer;
-  background-color: #c1ece4;
+  background-color: #fff5e1;
   border: none;
   background-image: url("./pictures/l.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position-x: center;
   padding-top: 7.5rem; /* 120px */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.AccommodationList:hover {
+  transform: scale(1.05);
 }
 
 .UserList {
@@ -29,13 +34,18 @@
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   cursor: pointer;
-  background-color: #c1ece4;
+  background-color: #fff5e1;
   border: none;
   background-image: url("./pictures/j.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position-x: center;
   padding-top: 7.5rem; /* 120px */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.UserList:hover {
+  transform: scale(1.05);
 }
 
 .providerList {
@@ -45,13 +55,18 @@
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   cursor: pointer;
-  background-color: #c1ece4;
+  background-color: #fff5e1;
   border: none;
   background-image: url("./pictures/b.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position-x: center;
   padding-top: 7.5rem; /* 120px */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.providerList:hover {
+  transform: scale(1.05);
 }
 
 .Adminstrators {
@@ -62,9 +77,14 @@
   top: 3.125rem; /* 50px */
   background-image: url("./pictures/e.png");
   background-repeat: no-repeat;
-  background-color: #c1ece4;
+  background-color: #fff5e1;
   background-size: auto;
   background-position-x: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.Adminstrators:hover {
+  transform: scale(1.05);
 }
 
 .Admin {
@@ -75,11 +95,15 @@
   border-radius: 1.25rem; /* 20px */
   top: 9.375rem; /* 150px */
   border: none;
-  background-color: #c1ece4;
-  color: white;
+  background-color: #fff5e1;
+  color: black;
   cursor: pointer;
   background-size: auto;
   background-position-x: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.Admin:hover {
+  transform: scale(1.05);
 }
 
 .Rental {
@@ -90,12 +114,17 @@
   top: 17.8125rem; /* 270px */
   cursor: pointer;
   border: none;
-  background-color: #c1ece4;
+  background-color: #fff5e1;
   background-image: url("./pictures/t.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position-x: center;
   padding-top: 7.5rem; /* 120px */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.Rental:hover {
+  transform: scale(1.05);
 }
 
 .financialGrowth {
@@ -106,10 +135,15 @@
   border: none;
   top: 17.8125rem; /* 270px */
   cursor: pointer;
-  background-color: #c1ece4;
+  background-color: #fff5e1;
   background-image: url("./pictures/r.png");
   background-size: auto;
   background-position-x: center;
   background-repeat: no-repeat;
   padding-top: 7.5rem; /* 120px */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.financialGrowth:hover {
+  transform: scale(1.05);
 }

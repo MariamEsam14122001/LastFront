@@ -1,102 +1,112 @@
-.body {
-  background-color: #f5f5f5; /* White Smoke */
-  color: #333333; /* Dark Gray */
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .form {
-  top: 25rem;
+  top: 3rem;
   left: 12.5rem;
   width: 56.25rem;
   height: 43.75rem;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: #c1ece4; /* Light Pink */
-  border-color: #3aa6b9; /* Teal Blue */
+
+  position: relative;
+
+  background-color: #fff5e1;
+  border-color: #0c1844;
   padding: 1.25rem;
   margin: 1.25rem;
   border-style: solid;
-  border-radius: 1.25rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-width: 0.25rem;
+  border-radius: 1.875rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.gender,
-.name,
-.email,
-.status,
-.phone,
 .age {
-  color: #3aa6b9; /* Teal Blue */
+  top: 26.6rem;
+  color: black; /* Teal Blue */
   font-size: 1.25rem;
   font-weight: 800;
+  left: 8.6rem;
   font-family: "Poppins", sans-serif;
-  text-align: left;
+
   position: absolute;
 }
 
 .gender {
-  top: 27.75rem;
-  left: 8.6875rem;
+  top: 25.6rem;
+  left: 8.6rem;
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .userprofile {
-  top: 4.1875rem;
+  top: 4rem;
   left: 20rem; /* changed from 320px */
-  color: white;
-  text-align: center;
+  color: black;
+
   width: 20rem; /* changed from 319px */
   height: auto;
   position: absolute;
   font-size: 2.25rem; /* changed from 36px */
   font-weight: 800;
   font-family: "Poppins", sans-serif;
-  text-align: left;
 }
 
 .full-name {
-  top: 8.5625rem; /* changed from 137px */
-  left: 8.6875rem; /* changed from 139px */
+  top: 6.6rem; /* changed from 137px */
+  left: 8.6rem;
   width: 7.375rem; /* changed from 118px */
   height: 1.875rem; /* changed from 30px */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
 .name {
-  color: #3aa6b9; /* Teal Blue */
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .email-address {
-  top: 13.625rem; /* changed from 218px */
-  left: 8.625rem; /* changed from 138px */
+  top: 11.6rem; /* changed from 218px */
+  left: 8.6rem;
   width: 9.5625rem; /* changed from 153px */
   height: 1.875rem; /* changed from 30px */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
 .email {
-  color: #3aa6b9; /* Teal Blue */
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .status {
-  top: 23.125rem; /* changed from 370px */
-  left: 8.75rem; /* changed from 140px */
-  color: #3aa6b9; /* Teal Blue */
+  top: 21.6rem; /* changed from 370px */
+  left: 8.6rem;
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .phone {
-  top: 18.625rem; /* changed from 298px */
-  left: 8.625rem; /* changed from 138px */
-  color: #3aa6b9; /* Teal Blue */
+  top: 16.6rem; /* changed from 298px */
+  left: 8.6rem;
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .button {
@@ -105,24 +115,23 @@
   width: 12.5rem; /* changed from 200px */
   cursor: pointer;
   height: 2.5rem; /* changed from 40px */
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  border-color: #3aa6b9; /* Teal Blue */
+
+  border-color: #0c1844; /* Teal Blue */
   border-style: ridge;
   border-radius: 6.25rem; /* changed from 100px */
-  background-color: #ff9eaa; /* Light Coral */
+  background-color: #0c1844; /* Light Coral */
   color: #ffffff; /* White */
   font-size: 1.25rem; /* changed from 20px */
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  text-align: center;
-  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
-  background-color: #3aa6b9; /* Teal Blue */
+  background-color: #0c184467;
+  transform: scale(1.05);
 }
 
 .accountsetting {
@@ -134,102 +143,103 @@
   position: absolute;
   font-size: 1.25rem; /* changed from 20px */
   font-weight: 600;
-  text-align: center;
+
   font-family: "Poppins", sans-serif;
 }
 
-input {
-  width: 90%;
-  height: 2.5rem; /* changed from 40px */
-  margin-bottom: 1.25rem; /* changed from 20px */
-  padding: 0.3125rem; /* changed from 5px */
-  border: 0.0625rem solid #3aa6b9; /* Teal Blue */
-  border-radius: 0.625rem; /* changed from 10px */
-  font-size: 1rem; /* changed from 16px */
-  color: #333333; /* Dark Gray */
-  position: absolute;
-}
-
 .nameinput {
-  top: 10.4375rem; /* changed from 167px */
-  left: 7.9375rem; /* changed from 127px */
+  top: 8.5rem; /* changed from 167px */
+  left: 8.8rem;
   width: 29rem; /* changed from 464px */
   height: 2.5rem; /* changed from 40px */
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .emailinput {
-  top: 15.8125rem; /* changed from 253px */
-  left: 7.9375rem; /* changed from 127px */
+  top: 13.5rem; /* changed from 253px */
+  left: 8.8rem;
   width: 29rem; /* changed from 464px */
   height: 2.5rem; /* changed from 40px */
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .statusinput {
-  top: 24.875rem; /* changed from 398px */
-  left: 7.9375rem; /* changed from 127px */
+  top: 23.5rem; /* changed from 398px */
+  left: 8.8rem;
   width: 29rem; /* changed from 464px */
   height: 2.5rem; /* changed from 40px */
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .genderinput {
-  top: 29.8125rem; /* changed from 474px */
-  left: 7.9375rem; /* changed from 127px */
+  top: 27.5rem; /* changed from 474px */
+  left: 8.8rem;
   width: 29rem; /* changed from 464px */
   height: 2.5rem; /* changed from 40px */
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .ageinput {
-  top: 4.687;
+  top: 28.5rem;
+  left: 8.8rem;
+  width: 29rem; /* changed from 464px */
+  height: 2.5rem; /* changed from 40px */
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .phoneinput {
-  top: 20.5rem;
-  left: 7.9375rem;
+  top: 18.5rem;
+  left: 8.8rem;
   width: 29rem;
   height: 2.5rem;
+  color: black; /* Teal Blue */
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  position: absolute;
 }
 
 .button1 {
   top: 42.5rem;
   left: 33.125rem;
   cursor: pointer;
-  display: flex;
+
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
 }
 
 .mesg {
   position: absolute;
   top: 12.5rem;
   left: 7.5rem;
-  color: #c1ece4; /* Mint Green */
-}
-
-.phoneinput {
-  top: 20.5rem;
-  left: 7.9375rem;
-  width: 29rem;
-  height: 2.5rem;
-}
-
-.button1 {
-  top: 42.5rem;
-  left: 33.125rem;
-  cursor: pointer;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
-
-.mesg {
-  position: absolute;
-  top: 12.5rem;
-  left: 7.5rem;
-  color: #c1ece4; /* Mint Green */
+  color: black; /* Mint Green */
 }
 .foot {
   position: relative;
-  top: 85rem;
+  top: 15rem;
 }

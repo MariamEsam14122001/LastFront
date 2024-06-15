@@ -3,11 +3,8 @@
   left: 0rem;
   width: 81.125rem; /* 1645px converted to rem */
   height: 110.5rem; /* 1768px converted to rem */
-  display: flex;
-  overflow: hidden;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
+  position: relative;
+
   background-color: white;
 }
 
@@ -17,10 +14,11 @@
   width: 39.875rem; /* 550px converted to rem */
   height: 91.5rem; /* 1400px converted to rem */
   position: absolute;
-  border-color: rgb(9, 192, 248);
+  border-color: #102c57;
   border-style: solid;
   border-width: 0.05rem; /* 1px converted to rem */
   border-radius: 1.875rem; /* 30px converted to rem */
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .trust {
@@ -100,6 +98,23 @@
   font-family: Lato;
   position: absolute;
 }
+.see {
+  background-color: #0c1844;
+  width: 12rem;
+  height: 3rem;
+  color: white;
+  border-radius: 2.5rem;
+  left: 13rem;
+  top: 0s;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1);
+}
+.see:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
+}
 
 .abouttext {
   top: 11.375rem; /* 150px converted to rem */
@@ -117,7 +132,7 @@
   font-stretch: normal;
 
   border-style: groove;
-  border-color: rgba(9, 192, 248, 0.24);
+  border-color: #c80036;
 
   border-left: none;
   border-right: none;
@@ -139,7 +154,7 @@
   left: 2.5rem; /* 40px converted to rem */
   padding-bottom: 1.25rem; /* 20px converted to rem */
   border-style: groove;
-  border-color: rgba(0, 255, 255, 0.267);
+  border-color: #c80036;
   border-top: none;
 
   border-left: none;
@@ -166,10 +181,11 @@
   width: 39.875rem; /* 550px converted to rem */
   height: 91.5rem; /* 1400px converted to rem */
   position: absolute;
-  border-color: rgb(9, 192, 248);
+  border-color: #102c57;
   border-style: solid;
   border-width: 0.05rem; /* 1px converted to rem */
   border-radius: 1.875rem; /* 30px converted to rem */
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .thank {
@@ -183,14 +199,14 @@
   font-family: Lato;
   font-weight: 600;
   position: absolute;
-  color: rgb(9, 192, 248);
+  color: #102c57;
   flex-shrink: 0;
 }
 
 .followus {
   top: 82.5rem; /* 1320px converted to rem */
   left: 56.125rem; /* 770px converted to rem */
-  color: rgb(9, 192, 248);
+  color: #0c1844;
   width: 18.3125rem; /* 293px converted to rem */
   height: auto;
   position: absolute;
@@ -221,7 +237,7 @@
   text-decoration: none;
 
   border-style: groove;
-  border-color: rgba(9, 192, 248, 0.24);
+  border-color: #c80036;
 
   border-left: none;
   border-right: none;
@@ -297,14 +313,14 @@
 
 .about {
   position: absolute;
-  top: 31.125rem;
+  top: 32.125rem;
   left: 14.375rem;
   width: 25.75rem;
-  height: 21.5rem;
+  height: 20.5rem;
   border-radius: 18.75rem;
-  border-color: rgba(172, 233, 252, 0.199);
-  border-style: unset;
-  background-color: rgba(172, 233, 252, 0.199);
+  border-color: #fff5e1;
+  border-style: none;
+  background-color: #fff5e1;
 }
 
 .icon {
@@ -314,9 +330,9 @@
   width: 12.5rem; /* 200px converted to rem */
   height: 6.25rem; /* 100px converted to rem */
   border-radius: 18.75rem; /* 300px converted to rem */
-  border-color: rgba(172, 233, 252, 0.199);
-  border-style: unset;
-  background-color: rgba(172, 233, 252, 0.199);
+  border-color: none;
+  border-style: none;
+  background-color: none;
 }
 
 .iicon {
@@ -326,9 +342,9 @@
   width: 12.5rem; /* 200px converted to rem */
   height: 6.25rem; /* 100px converted to rem */
   border-radius: 18.75rem; /* 300px converted to rem */
-  border-color: rgba(172, 233, 252, 0.199);
-  border-style: unset;
-  background-color: rgba(172, 233, 252, 0.199);
+  border-color: none;
+  border-style: none;
+  background-color: none;
 }
 
 .email {
@@ -338,9 +354,9 @@
   width: 12.5rem; /* 200px converted to rem */
   height: 10.25rem; /* 100px converted to rem */
   border-radius: 1.25rem; /* 100px converted to rem */
-  border-color: rgba(172, 233, 252, 0.089);
-  border-style: solid;
-  background-color: rgba(172, 233, 252, 0.089);
+  border-color: none;
+  border-style: none;
+  background-color: none;
 }
 
 .fax {
@@ -350,9 +366,9 @@
   width: 12.5rem; /* 200px converted to rem */
   height: 10.25rem; /* 100px converted to rem */
   border-radius: 1.25rem; /* 100px converted to rem */
-  border-color: rgba(172, 233, 252, 0.089);
-  border-style: solid;
-  background-color: rgba(172, 233, 252, 0.089);
+  border-color: none;
+  border-style: none;
+  background-color: none;
 }
 
 .location {
@@ -362,9 +378,9 @@
   width: 12.5rem; /* 200px converted to rem */
   height: 9.5rem; /* 120px converted to rem */
   border-radius: 1.25rem; /* 100px converted to rem*/
-  border-color: rgba(172, 233, 252, 0.089);
-  border-style: solid;
-  background-color: rgba(172, 233, 252, 0.089);
+  border-color: none;
+  border-style: none;
+  background-color: none;
 }
 .mobile {
   position: absolute;
@@ -373,9 +389,9 @@
   width: 8.25rem; /* 100px converted to rem */
   height: 16rem; /* 240px converted to rem */
   border-radius: 1.25rem; /* 100px converted to rem */
-  border-color: rgba(172, 233, 252, 0.089);
-  border-style: solid;
-  background-color: rgba(172, 233, 252, 0.089);
+  border-color: none;
+  border-style: none;
+  background-color: none;
 }
 
 .wavy {

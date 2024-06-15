@@ -6,14 +6,14 @@
   align-items: center; /* Center the content vertically */
   position: absolute;
   bottom: 0;
-  background-color: #ffd0d0c5; /* Light Pink */
-  border-top: 0.125rem solid #ff9eaa; /* Soft Pink Border */
+  background-color: #0c1844; /* Light Pink */
+  border-top: 0.125rem solid #0c1844; /* Soft Pink Border */
   align-items: flex-start;
   flex-shrink: 1;
 }
 
 .text {
-  color: #ff9eaa; /* Soft Pink */
+  color: white; /* Soft Pink */
   font-size: 1.25rem; /* 20px converted to rem */
   font-weight: 800; /* ExtraBold isn't a valid value, using 800 for boldness */
   text-align: center; /* Center text alignment */

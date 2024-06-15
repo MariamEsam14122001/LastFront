@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Items = ({ accommodations = [], likedItems = [], onToggleLike }) => {
   if (!Array.isArray(accommodations) || accommodations.length === 0) {
-    return <p>No accommodations found.</p>;
+    return <p>Loading....</p>;
   }
 
   return (
