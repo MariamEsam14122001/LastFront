@@ -2,44 +2,39 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./owneraccount.module.css";
 import Header from "../../componets/header/Header.jsx";
 import Footer from "../../componets/footer/Footer.jsx";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUserProfile } from "../../redux/authSlice";
 import axios from "axios";
 
 const Ownform = () => {
   const fileInputRef = useRef(null);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const handleBrowseClick = () => {
-    fileInputRef.current.click();
-  };
-
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
-    photo: null,
     phone: "",
+    photo: null,
   });
-
   const [userId, setUserId] = useState(null);
   const [csrfToken, setCsrfToken] = useState(""); // State to store CSRF token
-
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [previewUrl, setPreviewUrl] = useState(null);
 
   useEffect(() => {
     const userProfile = sessionStorage.getItem("userProfile");
     if (userProfile) {
       const parsedProfile = JSON.parse(userProfile);
       setUserId(parsedProfile.id);
+      setFormData(parsedProfile); // Pre-fill the form with existing user data
     } else {
       console.error("User profile not found in sessionStorage");
     }
 
-    // Fetch CSRF token when component mounts
-    // Fetch CSRF token when component mounts
     fetchCsrfToken();
-
-    // Log CSRF token
-    console.log("CSRF Token:", csrfToken);
   }, []);
 
   const fetchCsrfToken = async () => {
@@ -51,77 +46,73 @@ const Ownform = () => {
     }
   };
 
+  const handleBrowseClick = () => {
+    fileInputRef.current.click();
+  };
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       setSelectedFile(file);
       setPreviewUrl(URL.createObjectURL(file));
-      setFormData({
-        ...formData,
-        photo: file,
-      });
+      setFormData({ ...formData, photo: file });
     }
   };
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "photo" && files.length > 0) {
-      setFormData({
-        ...formData,
-        [name]: files[0],
-      });
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.password !== formData.password2) {
-      alert("Passwords do not match!");
-      return;
+
+    const data = {
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      phone: formData.phone,
+    };
+
+    if (selectedFile) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const base64String = reader.result;
+        data.photo = base64String;
+        updateProfile(data);
+      };
+      reader.readAsDataURL(selectedFile);
+    } else {
+      updateProfile(data);
     }
+  };
 
-    if (!userId) {
-      console.error("User ID is null. Cannot submit form.");
-      return;
-    }
+  const updateProfile = async (data) => {
+    const queryString = Object.keys(data)
+      .map((key) => `${key}=${encodeURIComponent(data[key])}`)
+      .join("&");
 
-    console.log("Submitting form with id:", userId);
-
-    console.log("Submitting form with token:", csrfToken);
-
-    const formDataToSend = new FormData();
-    formDataToSend.append("name", formData.name);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("password", formData.password);
-    if (formData.photo) {
-      formDataToSend.append("photo", formData.photo);
-    }
-    // formDataToSend.append("setting", formData.setting);
     const token = sessionStorage.getItem("authToken");
 
-    console.log("Authentication Token:", token);
-    // const csrfToken = sessionStorage.getItem("csrfToken");
     try {
       const response = await axios.put(
         `http://localhost:8000/owner/profile/${userId}/update`,
-        formDataToSend,
+        queryString,
         {
           headers: {
-            "Content-Type": "multipart/form-data",
+            "Content-Type": "application/x-www-form-urlencoded",
             Authorization: `Bearer ${token}`,
-            // Include CSRF token if necessary
             "X-CSRF-TOKEN": csrfToken,
           },
         }
       );
-      console.log("Changing data successful:", response.data);
+
+      const updatedUser = response.data.user;
+      dispatch(setUserProfile(updatedUser));
+      sessionStorage.setItem("userProfile", JSON.stringify(updatedUser));
+      navigate("/ownerform");
     } catch (error) {
-      console.error("Changing data failed:", error);
+      console.error("Update failed:", error);
     }
   };
 

@@ -1,0 +1,472 @@
+.uploadform {
+  width: 37.5rem;
+  height: 68.75rem;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: #fff5e1;
+  border: solid;
+
+  border-color: #0c1844;
+  top: 0.625rem;
+  left: 1.875rem;
+  border-width: 0.25rem;
+  border-radius: 1.875rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.upload-your-image-text {
+  top: 2.1875rem;
+  left: 6.125rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 26.3125rem;
+  height: auto;
+  position: absolute;
+  font-size: 2.25rem;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.browse {
+  top: 5.625rem;
+  left: 3.75rem;
+  width: 29.6875rem;
+  height: 10.625rem;
+  position: absolute;
+  align-self: stretch;
+  align-items: flex-start;
+  border-style: dashed;
+  border-color: rgba(128, 128, 128, 0.719);
+  border-width: 1px;
+  border-radius: 0.5625rem;
+}
+
+.browseimage {
+  top: 4.6875rem;
+  left: 6.875rem;
+  width: 29.6875rem;
+  height: 10.625rem;
+  position: absolute;
+}
+
+.teext {
+  top: 2.5rem;
+  position: absolute;
+  color: rgba(149, 157, 177, 1);
+}
+
+.text {
+  top: -4.375rem;
+  left: -6.875rem;
+  width: 29.6875rem;
+  height: 10rem;
+  position: relative;
+  color: rgba(149, 157, 177, 1);
+  cursor: pointer;
+  border: none;
+  padding-top: 5rem;
+  padding-left: 6.25rem;
+  background-image: url("../pictures/browse.png");
+  background-size: 6.25rem;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.text04 {
+  top: 3.75rem;
+  left: 0.8125rem;
+  color: rgba(149, 157, 177, 1);
+  height: auto;
+  position: absolute;
+  font-size: 0.875rem;
+  font-style: Bold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 800;
+  line-height: 150%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.specstext {
+  top: 22.5rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 12.8125rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.appartmentspecsinput {
+  top: 24.375rem;
+  left: 3.75rem;
+  width: 29rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.94);
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 0.375rem;
+}
+
+.addresstext {
+  top: 26.875rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 12.8125rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.appartmentaddressinput {
+  top: 28.75rem;
+  left: 3.75rem;
+  width: 29rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.94);
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 0.375rem;
+}
+
+.locationtext {
+  top: 31.25rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 12.8125rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.locationinput {
+  top: 33.125rem;
+  left: 3.75rem;
+  width: 29rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.94);
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 0.375rem;
+}
+
+.regiontext {
+  top: 40rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 12.8125rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.regioninput {
+  top: 41.875rem;
+  left: 3.75rem;
+  width: 29rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.94);
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 0.375rem;
+}
+
+.rentaltext {
+  top: 44.375rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 12.8125rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.rentalpriceinput {
+  top: 46.25rem;
+  left: 3.75rem;
+  width: 29rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.94);
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 0.375rem;
+}
+
+.phonenumberinput {
+  top: 50.625rem;
+  left: 3.75rem;
+  width: 29rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.94);
+  border-style: solid;
+  border-width: 0.03125rem;
+  border-radius: 0.375rem;
+}
+
+.city {
+  top: 37.5rem;
+  left: 3.75rem;
+  width: 29rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.94);
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 0.375rem;
+}
+
+.governoratetext {
+  top: 35.625rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 12.8125rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.phonetext {
+  top: 48.75rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 21.5625rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.ortext {
+  top: 57.5rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 18.75rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.sharedradio {
+  top: 59.375rem;
+  left: 3.75rem;
+  width: 1.6875rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(241, 241, 241, 1);
+  border-style: solid;
+  border-width: 0.125rem;
+  cursor: pointer;
+}
+
+.sharedtext {
+  top: 59.375rem;
+  left: 5.625rem;
+  color: rgba(0, 0, 0, 0.94);
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.invidualradio {
+  top: 59.375rem;
+  left: 18.75rem;
+  width: 1.6875rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(241, 241, 241, 1);
+  border-style: solid;
+  border-width: 0.125rem;
+  cursor: pointer;
+}
+
+.invidualtext {
+  top: 59.375rem;
+  left: 20.625rem;
+  color: rgba(0, 0, 0, 0.94);
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.donebutton {
+  top: 62.5rem;
+  left: 4.375rem;
+  width: 29rem;
+  height: 2.5rem;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: #0c1844;
+  border-radius: 1.25rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.donebutton:hover {
+  background-color: #0c184467;
+  transform: scale(1.05);
+}
+.text12 {
+  top: 0.3125rem;
+  left: 8.8125rem;
+  color: white;
+  width: 10.5rem;
+  height: auto;
+  position: relative;
+  font-size: 1.25rem;
+  font-style: SemiBold;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.no_of_tenants {
+  top: 53.125rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 21.5625rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.no_of_tenantsinput {
+  top: 55rem;
+  left: 3.75rem;
+  width: 29rem;
+  height: 1.25rem;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.94);
+  border-style: solid;
+  border-width: 0.03125rem;
+  border-radius: 0.375rem;
+}
+
+.main_image {
+  top: 17.5rem;
+  left: 3.75rem;
+  color: rgba(0, 0, 0, 0.94);
+  width: 21.5625rem;
+  height: auto;
+  position: absolute;
+  font-size: 1.25rem;
+  font-style: Medium;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.main_imagee {
+  top: 19.375rem;
+  left: 3.75rem;
+  width: 15.625rem;
+  height: 2.1875rem;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  color: rgba(149, 157, 177, 1);
+}
+
+.main_ima {
+  top: 0.625rem;
+  left: 6.625rem;
+  width: 29rem;
+  height: 1.875rem;
+  position: absolute;
+  color: rgba(172, 233, 252, 0.055);
+}
