@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import styles from "./rent.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { useSelector } from "react-redux";
 import axios from "axios";
 
-function WhatsAppButton() {
+function WhatsAppButton({ accommodationId }) {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [referenceNumber, setReferenceNumber] = useState("");
   const [endDate, setEndDate] = useState("");
+
+  const authToken =
+    useSelector((state) => state.auth.token) ||
+    sessionStorage.getItem("authToken");
 
   const handleButtonClick = () => {
     setShowPopup(true);
@@ -34,18 +39,27 @@ function WhatsAppButton() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!authToken) {
+      alert("You are not logged in.");
+      return;
+    }
+
     const formData = new FormData();
-    formData.append("image", selectedFile);
-    formData.append("referenceNumber", referenceNumber);
-    formData.append("endDate", endDate);
+    formData.append("img", selectedFile); // Ensure this matches the backend variable name
+    formData.append("reference_number", referenceNumber);
+    formData.append("end_date", endDate);
+    formData.append("accommodation_id", accommodationId);
 
     try {
+      console.log("Token retrieved:", authToken);
+
       const response = await axios.post(
-        "http://localhost:8000/api/upload",
+        `http://localhost:8000/api/rental`,
         formData,
         {
           headers: {
             "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${authToken}`, // Include the token in the request headers
           },
         }
       );
@@ -57,7 +71,7 @@ function WhatsAppButton() {
     handleClosePopup();
   };
 
-  const iiiiconStyle = {
+  const iconStyle = {
     marginRight: "80px",
     color: "#25D366",
     cursor: "pointer",
@@ -79,7 +93,7 @@ function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faWhatsapp} size="2x" style={iiiiconStyle} />
+        <FontAwesomeIcon icon={faWhatsapp} size="2x" style={iconStyle} />
       </a>
       {showPopup && (
         <form onSubmit={handleSubmit}>
@@ -94,6 +108,7 @@ function WhatsAppButton() {
                   className={styles.text}
                   type="file"
                   onChange={handleFileChange}
+                  name="image"
                 />
                 {selectedFile && <p>{selectedFile.name}</p>}
               </div>
@@ -103,6 +118,7 @@ function WhatsAppButton() {
               className={styles.Enterreferencenumber}
               placeholder="Enter reference number"
               value={referenceNumber}
+              name="reference_number"
               onChange={handleReferenceNumberChange}
             />
             <span className={styles.EndDate}>End Date :</span>
@@ -110,6 +126,7 @@ function WhatsAppButton() {
               type="date"
               className={styles.dateinput}
               value={endDate}
+              name="end_date"
               onChange={handleEndDateChange}
             />
             <button type="submit">Submit</button>

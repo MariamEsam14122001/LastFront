@@ -8,7 +8,7 @@ import VRList from "../../componets/vr/VRList.jsx";
 import ImagesList from "../../componets/vr/ImagesList.jsx";
 import img1 from "../pictures/line.png";
 import Header from "../../componets/header/Header.jsx";
-import WhatsAppButton from "../../componets/rentbutton/Rent.jsx";
+import RentButton from "../../componets/rentbutton/Rent.jsx";
 import StarRating from "../../componets/ratingandreview/RC.jsx";
 import { useParams } from "react-router-dom";
 // import bathroom from "./bathroom3.jpg";
@@ -62,7 +62,7 @@ const PropertyDetails = (props) => {
   return (
     <>
       <Header />
-      <WhatsAppButton />
+      <RentButton accommodationId={id} />
       <StarRating />
       <div className={styles["property-details"]}>
         <div className={styles["image1"]}>
