@@ -117,6 +117,7 @@ const Uploadform = () => {
           name="description"
           value={formData.description}
           id="description"
+          placeholder="Enter yoor description"
           type="text"
           className={styles.appartmentspecsinput}
         />
@@ -125,18 +126,20 @@ const Uploadform = () => {
         <input
           onChange={handleChange}
           name="address"
+          placeholder="Enter your address"
           value={formData.address}
           id="address"
           type="text"
           className={styles.appartmentaddressinput}
         />
 
-        <span className={styles.no_of_tenants}>No of Tenants :</span>
+        <span className={styles.no_of_tenants}>Number of Tenants :</span>
         <input
           onChange={handleChange}
           name="no_of_tenants"
           value={formData.no_of_tenants}
           id="no_of_tenants"
+          placeholder="Enter your number of tenants"
           type="text"
           className={styles.no_of_tenantsinput}
         />
@@ -160,6 +163,7 @@ const Uploadform = () => {
           name="location_link"
           value={formData.location_link}
           id="location_link"
+          placeholder="Enter your location link"
           type="text"
           className={styles.locationinput}
         />
@@ -171,7 +175,9 @@ const Uploadform = () => {
           onChange={handleChange}
           className={styles.regioninput}
         >
-          <option value="">Select Region</option>
+          <option value="" className={styles.select}>
+            Select Region
+          </option>
           {regions.map((region) => (
             <option key={region} value={region}>
               {region}
@@ -184,6 +190,7 @@ const Uploadform = () => {
           onChange={handleChange}
           name="price"
           value={formData.price}
+          placeholder="Enter your rental price"
           id="price"
           type="text"
           className={styles.rentalpriceinput}
@@ -195,6 +202,7 @@ const Uploadform = () => {
           name="facilities"
           value={formData.facilities}
           id="facilities"
+          placeholder="Enter your facilities"
           type="text"
           className={styles.phonenumberinput}
         />
@@ -219,7 +227,7 @@ const Uploadform = () => {
         />
         <span className={styles.invidualtext}>Individual :</span>
 
-        <span className={styles.governoratetext}> Governorate :</span>
+        <span className={styles.governoratetext}> city :</span>
         <div>
           <select
             name="governorate"

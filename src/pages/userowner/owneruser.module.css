@@ -30,6 +30,7 @@
   width: 32.4375rem; /* 519px / 16 */
   height: 15rem; /* 240px / 16 */
   display: flex;
+  color: white;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
@@ -44,12 +45,13 @@
 .user:hover {
   background-color: #fff5e18c;
   transform: scale(1.05);
+  color: #0c1844;
 }
 
 .text {
   top: 6.0625rem; /* 97px / 16 */
   left: 15.5625rem; /* 249px / 16 */
-  color: white;
+
   width: 16.875rem; /* 270px / 16 */
   height: auto;
   position: absolute;
@@ -80,6 +82,7 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
+  color: white;
   border-style: solid;
   border-color: #0c1844;
   border-width: 0.35rem; /* 1px / 16 */
@@ -91,12 +94,13 @@
 .owner:hover {
   background-color: #fff5e18c;
   transform: scale(1.05);
+  color: #0c1844;
 }
 
 .text1 {
   top: 6.1875rem; /* 99px / 16 */
   left: 13.5rem; /* 216px / 16 */
-  color: white;
+
   width: 17.9375rem; /* 287px / 16 */
   height: auto;
   position: absolute;

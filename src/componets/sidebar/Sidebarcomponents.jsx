@@ -1,4 +1,4 @@
-import img from "../pictures/logo.svg";
+import img from "../pictures/logo.png";
 import React, { useState } from "react";
 import styles from "./sidebarcomponents.module.css";
 import { Link } from "react-router-dom";

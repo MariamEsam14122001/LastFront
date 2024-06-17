@@ -1,28 +1,50 @@
 import React, { useState, useEffect } from "react";
 import styles from "./userprofile.module.css";
 import Photos from "../../componets/photo/Photo.jsx";
-import img from "../pictures/prof.png";
+//import img from "../pictures/prof.png";
 import LogoutButton from "../../componets/logoutbutton/LogoutButton.jsx";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux"; 
+import { useSelector } from "react-redux";
 import Header from "../../componets/header/Header.jsx";
 import Footer from "../../componets/footer/Footer.jsx";
+import axios from "axios";
 
 const Userform = () => {
   const [photoUrl, setPhotoUrl] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [photo, setPhoto] = useState(null); // New state for photo file
   const userProfile = useSelector((state) => state.auth.userProfile); // Access userProfile from Redux
+  const token = useSelector((state) => state.auth.token); // Assuming token is stored in Redux
 
   useEffect(() => {
-    if (userProfile) {
-      setPhotoUrl(userProfile.photo || "");
-      setIsLoading(false);
-    } else {
-      setError("No user data available");
-      setIsLoading(false);
-    }
-  }, [userProfile]);
+    // console.log("User Profile:", userProfile); // Log userProfile
+
+    const fetchPhotoUrl = async () => {
+      if (userProfile && userProfile.photo) {
+        try {
+          const response = await axios.get(
+            `http://localhost:8000/api/user/profile`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+          setPhotoUrl(response.data.photoUrl);
+          setIsLoading(false);
+        } catch (error) {
+          console.error("Error fetching photo URL:", error);
+          setError(error.message);
+          setIsLoading(false);
+        }
+      } else {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPhotoUrl();
+  }, [userProfile, token]);
 
   return (
     <div>
@@ -43,39 +65,48 @@ const Userform = () => {
         <div className={styles["form"]}>
           <span className={styles["userprofile"]}>User Profile</span>
 
-          {userProfile ? (
-            <>
-              <div className={styles["full-name"]}>
-                <span className={styles["name"]}>Name:</span>
-                <p className={styles["nameinput"]}>{userProfile.name}</p>
-              </div>
+          <div className={styles["full-name"]}>
+            <span className={styles["name"]}>Name:</span>
+            <p className={styles["nameinput"]}>
+              {userProfile && userProfile.name}
+            </p>
+          </div>
 
-              <div className={styles["email-address"]}>
-                <span className={styles["email"]}>Email Address:</span>
-                <p className={styles["emailinput"]}>{userProfile.email}</p>
-              </div>
+          <div className={styles["email-address"]}>
+            <span className={styles["email"]}>Email Address:</span>
+            <p className={styles["emailinput"]}>
+              {userProfile && userProfile.email}
+            </p>
+          </div>
 
-              <div>
-                <span className={styles["status"]}>Status:</span>
-                <p className={styles["statusinput"]}>{userProfile.status}</p>
-              </div>
+          <div>
+            <span className={styles["status"]}>Status:</span>
+            <p className={styles["statusinput"]}>
+              {userProfile && userProfile.status}
+            </p>
+          </div>
 
-              <span className={styles["gender"]}>Gender:</span>
-              <p className={styles["genderinput"]}>{userProfile.gender}</p>
+          <div>
+            <span className={styles["gender"]}>Gender:</span>
+            <p className={styles["genderinput"]}>
+              {userProfile && userProfile.gender}
+            </p>
+          </div>
 
-              <span className={styles["age"]}>
-                <span>Age:</span>
-                <p className={styles["ageinput"]}>{userProfile.age}</p>
-              </span>
+          <div className={styles["age"]}>
+            <span>Age:</span>
+            <p className={styles["ageinput"]}>
+              {userProfile && userProfile.age}
+            </p>
+          </div>
 
-              <div>
-                <span className={styles["phone"]}>Phone:</span>
-                <p className={styles["phoneinput"]}>{userProfile.phone}</p>
-              </div>
-            </>
-          ) : (
-            <p className={styles["mesg"]}>No user data available</p>
-          )}
+          <div>
+            <span className={styles["phone"]}>Phone:</span>
+            <p className={styles["phoneinput"]}>
+              {userProfile && userProfile.phone}
+            </p>
+          </div>
+
           <Link to="/Useraccount">
             <button name="setting" id="setting" className={styles["button"]}>
               <span className={styles["accountsetting"]}>Edit Profile</span>

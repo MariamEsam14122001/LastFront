@@ -36,23 +36,25 @@
 
 .popup button {
   color: white;
-  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0c1844;
   cursor: pointer;
   border-color: #0c1844;
   border-radius: 2rem; /* 20px */
   border-style: solid;
-  padding: 0.5rem; /* 5px */
-  margin-left: 6.875rem; /* 110px */
+  padding: 0.4rem; /* 5px */
+  margin-left: 8rem; /* 110px */
   margin-top: 3.125rem; /* 50px */
   font-weight: 600;
   top: 13.75rem; /* 220px */
+  width: 5rem;
   position: absolute;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .popup button:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: black;
 }
 .popup a:hover {
   text-decoration: underline;
@@ -66,80 +68,38 @@
   color: white;
   background-color: #0c1844;
   border-color: #0c1844;
-  margin-left: 6.875rem; /* 110px */
-  margin-top: 3.125rem; /* 50px */
+  margin-left: 2rem; /* 110px */
+  margin-top: 2rem; /* 50px */
   font-weight: 800;
-  width: 9.375rem; /* 150px */
+  width: 9rem; /* 150px */
   font-size: medium;
   position: absolute;
-  top: 51.25rem; /* 820px */
-  left: 71.875rem; /* 1150px */
+  top: 20rem;
+  left: 20rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .rent:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: black;
 }
 
-.img {
+.Report {
   position: absolute;
   color: #c80036;
-  font-weight: 700;
-  top: 2rem; /* 30px */
+  font-weight: 800;
+  top: 2rem; /* 100px */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.browseimage {
+.Enterreport {
   position: absolute;
   color: #000;
-  top: 0;
-}
-
-.text {
-  position: absolute;
-  color: gray;
-  top: 3.75rem; /* 60px */
-}
-
-.ReferenceNumber {
-  position: absolute;
-  color: #c80036;
-  font-weight: 700;
-  top: 7rem; /* 100px */
-}
-
-.Enterreferencenumber {
-  position: absolute;
-  color: #000;
-  top: 8.5rem; /* 130px */
-}
-
-.EndDate {
-  position: absolute;
-  color: #c80036;
-  font-weight: 700;
-  top: 12rem; /* 160px */
-}
-
-.dateinput {
-  position: absolute;
-  color: #000;
-  top: 13.5rem; /* 190px */
-}
-
-.WhatsApp {
-  color: white;
-  text-decoration: none;
-  background-color: green;
-  cursor: pointer;
-  border-radius: 1.875rem; /* 30px */
-  border-style: solid;
-  padding: 0.3125rem; /* 5px */
-  margin-left: 6.875rem; /* 110px */
-  margin-top: 3.125rem; /* 50px */
-  font-weight: 700;
-  top: 51.25rem; /* 820px */
-  left: 75rem; /* 1200px */
-  width: 3.125rem; /* 50px */
-  height: 3.125rem; /* 50px */
-  position: absolute;
+  top: 4.5rem; /* 130px */
+  height: 10rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  resize: both;
+  width: 85%;
+  max-width: 16rem;
+  padding: 1.5rem;
 }

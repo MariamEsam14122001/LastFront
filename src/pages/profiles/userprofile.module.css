@@ -17,11 +17,11 @@
 }
 
 .age {
-  top: 26.6rem;
+  top: 29.6rem;
   color: black; /* Teal Blue */
   font-size: 1.25rem;
   font-weight: 800;
-  left: 8.6rem;
+  left: 8.8rem;
   font-family: "Poppins", sans-serif;
 
   position: absolute;
@@ -39,7 +39,7 @@
 }
 
 .userprofile {
-  top: 4rem;
+  top: 2rem;
   left: 20rem; /* changed from 320px */
   color: black;
 
@@ -72,7 +72,7 @@
 .email-address {
   top: 11.6rem; /* changed from 218px */
   left: 8.6rem;
-  width: 9.5625rem; /* changed from 153px */
+  width: 15.5625rem; /* changed from 153px */
   height: 1.875rem; /* changed from 30px */
 
   position: absolute;
@@ -130,14 +130,15 @@
 }
 
 .button:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 
 .accountsetting {
   top: 0.3125rem; /* changed from 5px */
   left: 0.9375rem; /* changed from 15px */
-  color: #f9f9e0;
+
   width: 10.5rem; /* changed from 168px */
   height: auto;
   position: absolute;
@@ -148,8 +149,8 @@
 }
 
 .nameinput {
-  top: 8.5rem; /* changed from 167px */
-  left: 8.8rem;
+  top: 2rem; /* changed from 167px */
+  left: 0rem;
   width: 29rem; /* changed from 464px */
   height: 2.5rem; /* changed from 40px */
   color: black; /* Teal Blue */
@@ -161,8 +162,8 @@
 }
 
 .emailinput {
-  top: 13.5rem; /* changed from 253px */
-  left: 8.8rem;
+  top: 3rem; /* changed from 253px */
+  left: 0rem;
   width: 29rem; /* changed from 464px */
   height: 2.5rem; /* changed from 40px */
   color: black; /* Teal Blue */
@@ -200,8 +201,8 @@
 }
 
 .ageinput {
-  top: 28.5rem;
-  left: 8.8rem;
+  top: 2.5rem;
+  left: 0rem;
   width: 29rem; /* changed from 464px */
   height: 2.5rem; /* changed from 40px */
   color: black; /* Teal Blue */

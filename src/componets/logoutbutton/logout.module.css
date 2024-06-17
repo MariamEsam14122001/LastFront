@@ -7,8 +7,7 @@
   align-items: center;
   border-radius: 6.25rem; /* 100px converted to rem */
   background-color: #0c1844; /* Sea Green */
-  color: #f9f9e0; /* White */
-  font-size: 1.25rem; /* 20px converted to rem */
+  color: white;
   border-color: #0c1844;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -18,14 +17,15 @@
 }
 
 .button:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 
 .logout {
   top: 0.3125rem; /* 5px converted to rem */
   left: 0.9375rem; /* 15px converted to rem */
-  color: white; /* White */
+
   width: 10.5rem; /* 168px converted to rem */
   height: auto;
   position: absolute;

@@ -5,12 +5,15 @@
   position: relative;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: rgba(172, 233, 252, 0.548);
+  background-color: #fff5e1;
   border: solid;
-  border-radius: 6.25rem;
-  border-color: rgb(9, 192, 248);
+
+  border-color: #0c1844;
   top: 0.625rem;
   left: 1.875rem;
+  border-width: 0.25rem;
+  border-radius: 1.875rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .upload-your-image-text {
@@ -50,6 +53,7 @@
   width: 29.6875rem;
   height: 10.625rem;
   position: absolute;
+  color: #0c1844;
 }
 
 .teext {
@@ -112,7 +116,7 @@
   top: 24.375rem;
   left: 3.75rem;
   width: 29rem;
-  height: 1.25rem;
+  height: 1.8rem;
   position: absolute;
   border-color: rgba(0, 0, 0, 0.94);
   border-style: solid;
@@ -141,7 +145,7 @@
   top: 28.75rem;
   left: 3.75rem;
   width: 29rem;
-  height: 1.25rem;
+  height: 1.8rem;
   position: absolute;
   border-color: rgba(0, 0, 0, 0.94);
   border-style: solid;
@@ -170,7 +174,7 @@
   top: 33.125rem;
   left: 3.75rem;
   width: 29rem;
-  height: 1.25rem;
+  height: 1.8rem;
   position: absolute;
   border-color: rgba(0, 0, 0, 0.94);
   border-style: solid;
@@ -199,7 +203,7 @@
   top: 41.875rem;
   left: 3.75rem;
   width: 29rem;
-  height: 1.25rem;
+  height: 1.8rem;
   position: absolute;
   border-color: rgba(0, 0, 0, 0.94);
   border-style: solid;
@@ -228,7 +232,7 @@
   top: 46.25rem;
   left: 3.75rem;
   width: 29rem;
-  height: 1.25rem;
+  height: 1.8rem;
   position: absolute;
   border-color: rgba(0, 0, 0, 0.94);
   border-style: solid;
@@ -240,7 +244,7 @@
   top: 50.625rem;
   left: 3.75rem;
   width: 29rem;
-  height: 1.25rem;
+  height: 1.8rem;
   position: absolute;
   border-color: rgba(0, 0, 0, 0.94);
   border-style: solid;
@@ -252,7 +256,8 @@
   top: 37.5rem;
   left: 3.75rem;
   width: 29rem;
-  height: 1.25rem;
+  height: 1.8rem;
+
   position: absolute;
   border-color: rgba(0, 0, 0, 0.94);
   border-style: solid;
@@ -376,15 +381,21 @@
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
-  background-color: rgba(9, 192, 248, 0.507);
+  background-color: #0c1844;
   border-radius: 1.25rem;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
-
+.donebutton:hover {
+  background-color: #fff5e1;
+  transform: scale(1.05);
+  color: #0c1844;
+}
 .text12 {
   top: 0.3125rem;
   left: 8.8125rem;
-  color: rgba(0, 0, 0, 0.94);
+
   width: 10.5rem;
   height: auto;
   position: relative;
@@ -419,7 +430,7 @@
   top: 55rem;
   left: 3.75rem;
   width: 29rem;
-  height: 1.25rem;
+  height: 1.8rem;
   position: absolute;
   border-color: rgba(0, 0, 0, 0.94);
   border-style: solid;
@@ -462,4 +473,7 @@
   height: 1.875rem;
   position: absolute;
   color: rgba(172, 233, 252, 0.055);
+}
+.select {
+  color: gray;
 }

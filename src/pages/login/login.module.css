@@ -128,18 +128,19 @@
   align-items: flex-start;
   flex-shrink: 1;
   background-color: #0c1844;
+  color: white;
   border-radius: 1.25rem; /* 20px */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .button:hover {
-  background-color: #0c184467;
-
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 .login {
   top: 0.3125rem; /* 5px */
   left: 8.8125rem; /* 141px */
-  color: white;
+
   width: 10.5rem; /* 168px */
   height: auto;
   position: absolute;

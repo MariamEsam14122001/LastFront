@@ -24,7 +24,7 @@ const SearchBar = ({ onSearch }) => {
   };
   const cities = ["Alexandria", "Cairo", "Aswan"];
   const districtsByCity = {
-    Alexandria: ["Seyouf", "San Stefano", "Louran", "Sidi Bishr"],
+    Alexandria: ["Seyouf", "San Stefano", "Louran", "Sidi Bishr", "Sidi Gaber"],
     Cairo: ["Maadi", "Heliopolis", "Nasr City", "6th of October"],
     Aswan: ["Daraw", "Edfu", "Abu Simbel"],
   };
@@ -75,7 +75,7 @@ const SearchBar = ({ onSearch }) => {
         onChange={(e) => setSearchType(e.target.value)}
       >
         <option value="">All Types</option>
-        <option value="ind">Individual</option>
+        <option value="Individual">Individual</option>
         <option value="Shared">Shared</option>
       </select>
       <button className={styles.searchButton} type="submit">

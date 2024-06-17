@@ -85,8 +85,8 @@
   width: 7.4375rem; /* 119px converted to rem */
   height: auto;
   position: absolute;
-  font-size: 1.25rem; /* 20px converted to rem */
-  font-style: Medium;
+  font-size: 1.55rem; /* 20px converted to rem */
+  font-style: Large;
 
   font-family: "Poppins";
   font-weight: 800;
@@ -103,7 +103,7 @@
 
   position: absolute;
 
-  font-weight: 800;
+  font-weight: 900;
 
   font-stretch: normal;
   text-decoration: none;
@@ -117,15 +117,16 @@
   height: 2.5rem; /* 40px converted to rem */
 
   position: absolute;
-
+  color: white;
   border-radius: 1.875rem; /* 30px converted to rem */
   background-color: #0c1844;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .button:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 
 .button2 {
@@ -137,14 +138,15 @@
 
   position: absolute;
   transition: background-color 0.3s ease, transform 0.3s ease;
-
+  color: white;
   border-radius: 1.875rem; /* 30px converted to rem */
 
   background-color: #0c1844;
 }
 .button2:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 .button3 {
   cursor: pointer;
@@ -153,15 +155,16 @@
   width: 12.5rem; /* 300px converted to rem */
   height: 2.5rem; /* 40px converted to rem */
   transition: background-color 0.3s ease, transform 0.3s ease;
-
+  color: white;
   position: absolute;
   border-radius: 1.875rem; /* 30px converted to rem */
 
   background-color: #0c1844;
 }
 .button3:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 .logout {
   cursor: pointer;
@@ -173,7 +176,7 @@
 
 .accccountsetting {
   text-align: center;
-  color: white;
+
   top: 0.3125rem;
   left: 1rem;
   width: 10.5rem;
@@ -191,7 +194,7 @@
 
 .accountsetting {
   text-align: center;
-  color: white;
+
   top: 0.3125rem; /* 5px converted to rem */
   left: 0.9375rem; /* 15px converted to rem */
   width: 10.5rem; /* 168px converted to rem */
@@ -209,7 +212,7 @@
 
 .acccountsetting {
   text-align: center;
-  color: white;
+
   top: 0.3125rem; /* 5px converted to rem */
   left: 1rem; /* 70px converted to rem */
   width: 10.5rem; /* 168px converted to rem */

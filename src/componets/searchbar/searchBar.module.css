@@ -73,6 +73,7 @@
 }
 
 .searchButton:hover {
-  background-color: rgb(176, 191, 218);
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }

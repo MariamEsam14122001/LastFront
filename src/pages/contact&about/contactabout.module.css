@@ -112,8 +112,9 @@
   box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1);
 }
 .see:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 
 .abouttext {

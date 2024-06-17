@@ -349,6 +349,7 @@
   width: 29rem; /* 464px / 16 */
   height: 2.5rem; /* 40px / 16 */
   display: flex;
+  color: white;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
@@ -357,13 +358,14 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .button:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 .create-account {
   top: 0.3125rem; /* 5px / 16 */
   left: 8.8125rem; /* 141px / 16 */
-  color: white;
+
   width: 10.5rem; /* 168px / 16 */
   height: auto;
   position: absolute;

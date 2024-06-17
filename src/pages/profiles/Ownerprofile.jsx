@@ -13,17 +13,37 @@ const Ownerform = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const userProfile = useSelector((state) => state.auth.userProfile); // Access userProfile from Redux
+  const token = useSelector((state) => state.auth.token); // Assuming token is stored in Redux
 
+  //
   useEffect(() => {
-    if (userProfile) {
-      setPhotoUrl(userProfile.photo || "");
-      setIsLoading(false);
-    } else {
-      setError("No user data available");
-      setIsLoading(false);
-    }
-  }, [userProfile]);
+    // console.log("User Profile:", userProfile); // Log userProfile
 
+    const fetchPhotoUrl = async () => {
+      if (userProfile && userProfile.photo) {
+        try {
+          const response = await axios.get(
+            `http://localhost:8000/api/user/profile`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+          setPhotoUrl(response.data.photoUrl);
+          setIsLoading(false);
+        } catch (error) {
+          console.error("Error fetching photo URL:", error);
+          setError(error.message);
+          setIsLoading(false);
+        }
+      } else {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPhotoUrl();
+  }, [userProfile, token]);
   return (
     <div>
       <meta charset="UTF-8" />

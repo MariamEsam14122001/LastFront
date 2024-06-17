@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import Report from "../../componets/report/Report.jsx";
 import styles from "./roomatte.module.css";
 import Header from "../../componets/header/Header.jsx";
 import Footer from "../../componets/footer/Footer.jsx";
@@ -57,9 +57,9 @@ const Roommatte = () => {
           </div>
           <p className={styles["phoneinput"]}>{roommateData.phone}</p>
 
-          <button name="setting" id="setting" className={styles["button"]}>
-            <span className={styles["accountsetting"]}>Report</span>
-          </button>
+          <div className={styles["button"]}>
+            <Report />
+          </div>
         </div>
       </div>
       <div className={styles["foot"]}>

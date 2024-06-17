@@ -15,6 +15,7 @@ const Signup = () => {
   const cities = [
     "",
     "Cairo",
+    "Luxor",
     "Giza",
     "Alexandria",
     "Shubra al Khaymah",
@@ -98,7 +99,22 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
+    // Validate password strength
+    const passwordRegex =
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    if (!passwordRegex.test(formData.password)) {
+      alert(
+        "Password should contain at least 8 characters, including letters, numbers, and symbols."
+      );
+      return;
+    }
     try {
       const formDataToSend = new FormData();
       for (const key in formData) {
@@ -163,6 +179,7 @@ const Signup = () => {
                 type="text"
                 id="name"
                 required
+                placeholder="Enter your name"
                 className={styles["fullname"]}
                 name="name"
                 value={formData.name}
@@ -174,6 +191,7 @@ const Signup = () => {
             </div>
             <input
               type="email"
+              placeholder="Enter your @mail"
               id="email"
               required
               className={styles["email"]}
@@ -187,6 +205,7 @@ const Signup = () => {
             <input
               type="password"
               id="password"
+              placeholder="Enter your password"
               required
               className={styles["password"]}
               name="password"
@@ -199,8 +218,10 @@ const Signup = () => {
             <input
               type="tel"
               id="phone"
+              required
               className={styles["phon"]}
               name="phone"
+              placeholder="Enter your phone"
               value={formData.phone}
               onChange={handleChange}
             />
@@ -210,6 +231,7 @@ const Signup = () => {
             <input
               type="file"
               id="photo"
+              required
               className={styles["photo"]}
               name="photo"
               // value={formData.photo}
@@ -220,13 +242,15 @@ const Signup = () => {
             {(userType === "renter" || userType === "user") && (
               <>
                 <span className={styles["gend"]}>
-                  <span>Gender</span>
+                  <span>Gender :</span>
                 </span>
                 <input
                   type="text"
                   id="gender"
+                  required
                   className={styles["gender"]}
                   name="gender"
+                  placeholder="Enter your gender"
                   value={formData.gender}
                   onChange={handleChange}
                 />
@@ -237,6 +261,8 @@ const Signup = () => {
                   type="number"
                   min={15}
                   max={99}
+                  required
+                  placeholder="Enter your age"
                   id="age"
                   className={styles["age"]}
                   name="age"
@@ -250,6 +276,7 @@ const Signup = () => {
                   className={styles["city"]}
                   id="city"
                   name="city"
+                  required
                   value={formData.city}
                   onChange={handleChange}
                 >
@@ -264,6 +291,7 @@ const Signup = () => {
                   className={styles["status"]}
                   id="status"
                   name="status"
+                  required
                   value={formData.status}
                   onChange={handleChange}
                 >
@@ -280,6 +308,7 @@ const Signup = () => {
                   className={styles["wheretogo"]}
                   id="where_to_go"
                   name="where_to_go"
+                  required
                   value={formData.where_to_go}
                   onChange={handleChange}
                 >

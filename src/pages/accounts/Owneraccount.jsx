@@ -22,7 +22,7 @@ const Ownform = () => {
     photo: null,
   });
   const [userId, setUserId] = useState(null);
-  const [csrfToken, setCsrfToken] = useState(""); // State to store CSRF token
+  const [csrfToken, setCsrfToken] = useState("");
 
   useEffect(() => {
     const userProfile = sessionStorage.getItem("userProfile");
@@ -66,7 +66,22 @@ const Ownform = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
+    // Validate password strength
+    const passwordRegex =
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    if (!passwordRegex.test(formData.password)) {
+      alert(
+        "Password should contain at least 8 characters, including letters, numbers, and symbols."
+      );
+      return;
+    }
     const data = {
       name: formData.name,
       email: formData.email,
@@ -132,6 +147,7 @@ const Ownform = () => {
           <input
             onChange={handleChange}
             name="name"
+            placeholder="Enter your name"
             value={formData.name}
             id="name"
             type="text"
@@ -145,6 +161,7 @@ const Ownform = () => {
           <input
             onChange={handleChange}
             name="email"
+            placeholder="Enter your @mail"
             value={formData.email}
             id="email"
             type="text"
@@ -160,6 +177,7 @@ const Ownform = () => {
             name="password"
             value={formData.password}
             id="password"
+            placeholder="Entre your password"
             type="password"
             className={styles["passwordinput"]}
           />
@@ -171,13 +189,12 @@ const Ownform = () => {
             name="phone"
             value={formData.phone}
             id="phone"
+            placeholder="Enter your phone"
             type="phone"
             className={styles["phoneinput"]}
           />
 
           <button
-            // name="setting"
-            // id="setting"
             type="submit"
             value={formData.setting}
             className={styles["button"]}
