@@ -106,15 +106,15 @@ const Signup = () => {
       return;
     }
 
-    // Validate password strength
-    const passwordRegex =
-      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
-    if (!passwordRegex.test(formData.password)) {
-      alert(
-        "Password should contain at least 8 characters, including letters, numbers, and symbols."
-      );
-      return;
-    }
+    // // Validate password strength
+    // const passwordRegex =
+    //   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    // if (!passwordRegex.test(formData.password)) {
+    //   alert(
+    //     "Password should contain at least 8 characters, including letters, numbers, and symbols."
+    //   );
+    //   return;
+    // }
     try {
       const formDataToSend = new FormData();
       for (const key in formData) {

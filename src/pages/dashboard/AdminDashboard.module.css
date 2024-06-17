@@ -9,7 +9,7 @@
 .AccommodationList {
   position: absolute;
   left: 3.125rem; /* 50px */
-  width: 12.5rem; /* 200px */
+  width: 15rem; /* 200px */
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   cursor: pointer;
@@ -29,8 +29,8 @@
 
 .UserList {
   position: absolute;
-  left: 18.75rem; /* 300px */
-  width: 12.5rem; /* 200px */
+  left: 20rem; /* 300px */
+  width: 15rem; /* 200px */
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   cursor: pointer;
@@ -50,8 +50,8 @@
 
 .providerList {
   position: absolute;
-  left: 34.375rem; /* 550px */
-  width: 12.5rem; /* 200px */
+  left: 37rem; /* 550px */
+  width: 15rem; /* 200px */
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   cursor: pointer;
@@ -71,8 +71,8 @@
 
 .Adminstrators {
   position: absolute;
-  left: 50rem; /* 800px */
-  width: 12.5rem; /* 200px */
+  left: 54rem; /* 800px */
+  width: 15rem; /* 200px */
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   background-image: url("./pictures/e.png");
@@ -88,28 +88,22 @@
 }
 
 .Admin {
-  position: absolute;
-  left: 3.125rem; /* 50px */
-  width: 7.5rem; /* 120px */
+  position: relative;
+  left:1rem; /* 50px */
+  /* width: 3rem; 120px */
   height: 2.5rem; /* 40px */
-  border-radius: 1.25rem; /* 20px */
-  top: 9.375rem; /* 150px */
-  border: none;
-  background-color: #fff5e1;
-  color: black;
-  cursor: pointer;
-  background-size: auto;
-  background-position-x: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  top: 10rem; /* 150px */
+ 
+ 
+
 }
-.Admin:hover {
-  transform: scale(1.05);
-}
+
 
 .Rental {
   position: absolute;
   left: 3.125rem; /* 50px */
-  width: 12.5rem; /* 200px */
+  width: 15rem; /* 200px */
   height: 12.5rem; /* 200px */
   top: 17.8125rem; /* 270px */
   cursor: pointer;
@@ -129,8 +123,8 @@
 
 .financialGrowth {
   position: absolute;
-  left: 18.75rem; /* 300px */
-  width: 12.5rem; /* 200px */
+  left: 20rem; /* 300px */
+  width: 15rem; /* 200px */
   height: 12.5rem; /* 200px */
   border: none;
   top: 17.8125rem; /* 270px */

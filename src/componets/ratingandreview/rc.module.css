@@ -1,5 +1,5 @@
 .starrating {
-  font-size: 1.5rem; /* 24px */
+  font-size: xx-large; /* 24px */
   cursor: pointer;
   position: absolute;
   top: 104.375rem; /* 1670px */
@@ -38,13 +38,13 @@
 .commentt {
   margin-top: 2.5rem; /* 40px */
   padding: 0.3125rem; /* 5px */
-  background-color: rgb(172, 233, 252);
+  background-color: #fff5e1;
   width: 25rem; /* 400px */
   height: 3.125rem; /* 50px */
   border-radius: 30px;
   border-bottom-left-radius: 0;
   border: solid;
-  border-color: rgba(172, 233, 252, 0.548);
+  border-color:#0c1844;
   font-style: italic;
   left: 6.875rem; /* 110px */
 }
@@ -62,49 +62,57 @@
 }
 
 .submit {
-  border-radius: 1.25rem; /* 20px */
+  border-radius: 2rem; /* 20px */
   border-style: bold;
-  background-color: blue;
-  color: whitesmoke;
+  background-color: #0c1844;
+  width: 10rem;
+  color: white;
   padding: 0.3125rem; /* 5px */
   position: absolute;
-  left: 31.25rem; /* 500px */
-  top: 112.5rem; /* 1800px */
-  font-size: large;
+  left: 45rem; /* 500px */
+  top: 115rem; /* 1800px */
+  font-size: x-large;
   font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
+.submit:hover{
+  background-color: #fff5e1;
+  transform: scale(1.05);
+  color: #0c1844;
+}
 .Ratin {
-  color: rgb(9, 192, 248);
+  color: #c80036;
   position: absolute;
   left: 1.875rem; /* 30px */
-  font-size: large;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: x-large;
   top: 101.875rem; /* 1630px */
 }
 
 .Ratinn {
-  color: rgb(9, 192, 248);
+  color: #c80036;
   position: absolute;
-  left: 6.25rem; /* 100px */
-  font-size: large;
-  font-weight: 600;
+  left:8rem; /* 100px */
+  font-weight: 800;
+  font-size: x-large;
   top: 101.875rem; /* 1630px */
 }
 
 .Review {
-  color: blue;
+  color: #c80036;
   position: absolute;
   top: 107.5rem; /* 1720px */
   left: 1.875rem; /* 30px */
-  font-weight: 600;
-  font-size: large;
+  font-weight: 800;
+  font-size: x-large;
 }
 
 .text {
   color: blue;
   position: absolute;
+  width:40rem;
+  height: 8rem;
   top: 110rem; /* 1760px */
   left: 1.875rem; /* 30px */
 }

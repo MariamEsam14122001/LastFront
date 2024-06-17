@@ -62,8 +62,8 @@ function WhatsAppButton() {
     color: "#25D366",
     cursor: "pointer",
     position: "absolute",
-    top: "60px",
-    left: "300px",
+    top: "54.5rem",
+    left: "90rem",
   };
 
   return (

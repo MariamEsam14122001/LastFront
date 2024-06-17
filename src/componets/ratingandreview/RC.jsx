@@ -78,7 +78,7 @@ function StarRating() {
             <textarea
               className={styles.text}
               placeholder="Enter your Review..."
-              rows="3"
+              rows="30"
               cols="50"
               value={comment}
               onChange={handleCommentChange}

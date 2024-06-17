@@ -74,11 +74,11 @@ const PropertyDetails = (props) => {
             <ImagesList images={imagesArray} />
           )}
         </div>
-        <button onClick={togglePanorama} className={styles["vrbutton"]} />
-        <span className={styles["textbuttonvr"]}>
-          <span>Property&apos;s Virtual Reality</span>
-        </span>
-
+        <button onClick={togglePanorama} className={styles["vrbutton"]}>
+          {/* <span className={styles["textbuttonvr"]}> */}
+          Property&apos;s Virtual Reality
+          {/* </span> */}
+        </button>
         <span className={styles["d3"]}>
           <span>Governorate: {accommodation.governorate}</span>
         </span>
@@ -119,6 +119,8 @@ const PropertyDetails = (props) => {
           style={{
             color: "black",
             top: "1150px",
+            fontSize: "large",
+            fontWeight: "600",
             position: "absolute",
             left: "150px",
           }}
