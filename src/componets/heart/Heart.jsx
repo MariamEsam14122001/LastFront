@@ -16,6 +16,7 @@ function HeartButton({ id }) {
   }
 
   const handleToggleLike = () => {
+    e.stopPropagation(); // prevent navigate
     if (!isAuthenticated) {
       console.log("Please log in to add items to wishlist");
       return;
