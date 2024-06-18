@@ -1,6 +1,8 @@
 .card-container {
   margin-top: 6.25rem; /* 100px */
-  margin-left: 1.875rem; /* 30px */
+  margin-left: 1rem; /* 30px */
   margin-right: 1.875rem; /* 30px */
-  margin-bottom: 6.25rem; /* 100px */
+  margin-bottom: 6.25rem;
+  width: 135rem ; 
+ 
 }

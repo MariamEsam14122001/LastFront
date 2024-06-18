@@ -5,7 +5,7 @@ import HeartButton from "../heart/Heart";
 import { WishlistProvider } from "../../Context/WishlistContext";
 import { useNavigate } from "react-router-dom";
 
-import { Link } from "react-router-dom";
+
 
 function Item({
   id,

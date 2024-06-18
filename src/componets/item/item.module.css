@@ -26,7 +26,7 @@
 
 .wishlist {
   top: 27rem;
-  left: 28rem;
+  left: 26rem;
   width: 4rem; /* 64px */
   height: 3.875rem; /* 62px */
   position: absolute;
@@ -37,7 +37,7 @@
   top: 17.5rem; /* 280px */
   left: 1.4375rem; /* 23px */
   width: 23.4375rem; /* 375px */
-  height: 7.0625rem; /* 113px */
+  height: 7rem; /* 113px */
   display: flex;
   position: absolute;
   align-items: flex-start;
@@ -104,7 +104,7 @@
 
 .image {
   top: 1rem;
-  left: 2rem;
+  left: 1rem;
   width: 30rem; /* 300px */
   height: 15rem;
   position: absolute;
