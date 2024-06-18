@@ -23,7 +23,7 @@ const Ownerform = () => {
       if (userProfile && userProfile.photo) {
         try {
           const response = await axios.get(
-            `http://localhost:8000/api/user/profile`,
+            `http://localhost:8000/api/owner/profile`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
