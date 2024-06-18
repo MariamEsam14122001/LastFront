@@ -22,7 +22,7 @@ const handleLogout = async (dispatch) => {
     dispatch(logout());
 
     // window.location.href = "/";
-    navigate("/");
+    //navigate("/");
   } catch (error) {
     console.error("There was an error logging out!", error);
   }
