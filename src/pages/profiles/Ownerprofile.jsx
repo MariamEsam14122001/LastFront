@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux"; // Import useSelector
 import Header from "../../componets/header/OwnerHeader.jsx";
 import Footer from "../../componets/footer/Footer.jsx";
+import axios from "axios";
 
 const Ownerform = () => {
   const [photoUrl, setPhotoUrl] = useState("");
