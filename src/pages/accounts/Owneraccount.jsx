@@ -74,14 +74,14 @@ const Ownform = () => {
     }
 
     // Validate password strength
-    const passwordRegex =
-      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
-    if (!passwordRegex.test(formData.password)) {
-      alert(
-        "Password should contain at least 8 characters, including letters, numbers, and symbols."
-      );
-      return;
-    }
+    // const passwordRegex =
+    //   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    // if (!passwordRegex.test(formData.password)) {
+    //   alert(
+    //     "Password should contain at least 8 characters, including letters, numbers, and symbols."
+    //   );
+    //   return;
+    // }
     const data = {
       name: formData.name,
       email: formData.email,
@@ -111,7 +111,7 @@ const Ownform = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8000/owner/profile/${userId}/update`,
+        `http://localhost:8000/api/owner/profile/${userId}/update`,
         queryString,
         {
           headers: {
