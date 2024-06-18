@@ -3,7 +3,7 @@ import React from "react";
 import Item from "./Item";
 import styles from "./items.module.css";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 const Items = ({ accommodations = [], likedItems = [], onToggleLike }) => {
   if (!Array.isArray(accommodations) || accommodations.length === 0) {
@@ -12,25 +12,20 @@ const Items = ({ accommodations = [], likedItems = [], onToggleLike }) => {
 
   return (
     <div className={styles["card-container"]}>
-      <div className="row  row-cols-md-3 g-3">
+      <div className="row row-cols-md-3 g-3">
         {accommodations.map((accommodation) => (
-          <Link
-            to={`/details/${accommodation.id}`}
-            state={{ item: accommodation }}
+          <Item
             key={accommodation.id}
-          >
-            <Item
-              id={accommodation.id}
-              title={accommodation.title}
-              price={accommodation.price}
-              location={accommodation.location}
-              main_image={`http://localhost:8000/storage/${accommodation.main_image}`}
-              region={accommodation.region}
-              shared_or_individual={accommodation.shared_or_individual}
-              isLiked={likedItems.includes(accommodation.id)}
-              onToggleLike={() => onToggleLike(accommodation.id)}
-            />
-          </Link>
+            id={accommodation.id}
+            title={accommodation.title}
+            price={accommodation.price}
+            location={accommodation.location}
+            main_image={`http://localhost:8000/storage/${accommodation.main_image}`}
+            region={accommodation.region}
+            shared_or_individual={accommodation.shared_or_individual}
+            isLiked={likedItems.includes(accommodation.id)}
+            onToggleLike={() => onToggleLike(accommodation.id)}
+          />
         ))}
       </div>
     </div>
@@ -38,12 +33,13 @@ const Items = ({ accommodations = [], likedItems = [], onToggleLike }) => {
 };
 
 Items.propTypes = {
-  accommodations: PropTypes.array,
+  accommodations: PropTypes.array.isRequired,
   likedItems: PropTypes.array,
   onToggleLike: PropTypes.func,
 };
 
 export default Items;
+
 // const Items = ({ accommodations = [], likedItems = [], onToggleLike }) => {
 //   if (!Array.isArray(accommodations) || accommodations.length === 0) {
 //     return <p>Loading....</p>;
@@ -53,12 +49,12 @@ export default Items;
 //     <div className={styles["card-container"]}>
 //       <div className="row  row-cols-md-3 g-3">
 //         {accommodations.map((accommodation) => (
-//           <Link
-//             to={`/details/${accommodation.id}`}
-//             state={{ item: accommodation }}
-//             key={accommodation.id}
-//           >
-//             <Item
+//  <Link
+//   to={`/details/${accommodation.id}`}
+//   state={{ item: accommodation }}
+//   key={accommodation.id}
+// >
+// //             <Item
 //               id={accommodation.id}
 //               title={accommodation.title}
 //               price={accommodation.price}

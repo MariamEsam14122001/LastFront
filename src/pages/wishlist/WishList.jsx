@@ -6,19 +6,20 @@ import Header from "../../componets/header/Header";
 import styles from "./wishlist.module.css";
 import { useWishlist } from "../../Context/WishlistContext.jsx";
 import { WishlistProvider } from "../../Context/WishlistContext.jsx";
+import { useSelector } from "react-redux";
 
 function WishList() {
   const { wishlist, fetchLikedItems } = useWishlist();
+  const token = useSelector((state) => state.auth.token);
 
   useEffect(() => {
-    if (fetchLikedItems) {
-      fetchLikedItems();
+    if (fetchLikedItems && token) {
+      fetchLikedItems(token);
     }
-  }, [fetchLikedItems]);
+  }, [fetchLikedItems, token]);
 
   if (!wishlist) {
-    // Handle the case where the wishlist context is not available
-    return <div>No wishlist available.</div>; // or render a fallback UI
+    return <div>No wishlist available.</div>;
   }
 
   return (

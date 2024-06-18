@@ -3,7 +3,10 @@ import styles from "./property.module.css";
 import img6 from "../pictures/location.png";
 import img7 from "../pictures/provide.png";
 import HeartButton from "../../componets/heart/Heart.jsx";
-import { WishlistProvider } from "../../Context/WishlistContext.jsx";
+import {
+  WishlistProvider,
+  useWishlist,
+} from "../../Context/WishlistContext.jsx";
 import VRList from "../../componets/vr/VRList.jsx";
 import ImagesList from "../../componets/vr/ImagesList.jsx";
 import img1 from "../pictures/line.png";
@@ -18,8 +21,8 @@ import axios from "axios";
 
 const PropertyDetails = (props) => {
   const { id } = useParams();
+  const { addToWishlist, removeFromWishlist, wishlist, error } = useWishlist();
   const [item, setItem] = useState(null);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,19 +34,23 @@ const PropertyDetails = (props) => {
         setItem(response.data);
       } catch (error) {
         console.error("Error fetching the property details:", error);
-        setError(error);
       }
     };
 
     fetchData();
   }, [id]);
 
-  // Panorama show
   const [showPanorama, setShowPanorama] = useState(false);
   const togglePanorama = () => {
     setShowPanorama(!showPanorama);
   };
-
+  const handleToggleWishlist = (accommodationId) => {
+    if (wishlist.includes(accommodationId)) {
+      removeFromWishlist(accommodationId);
+    } else {
+      addToWishlist(accommodationId);
+    }
+  };
   if (error) {
     return <div>Error loading property details: {error.message}</div>;
   }
@@ -56,8 +63,6 @@ const PropertyDetails = (props) => {
   const imagesArray = Array.isArray(accommodation.images)
     ? accommodation.images
     : accommodation.images.split(",");
-
-  console.log("Images:", imagesArray);
 
   return (
     <>
@@ -75,9 +80,7 @@ const PropertyDetails = (props) => {
           )}
         </div>
         <button onClick={togglePanorama} className={styles["vrbutton"]}>
-          {/* <span className={styles["textbuttonvr"]}> */}
           Property&apos;s Virtual Reality
-          {/* </span> */}
         </button>
         <span className={styles["d3"]}>
           <span>Governorate: {accommodation.governorate}</span>
@@ -91,22 +94,22 @@ const PropertyDetails = (props) => {
         <span className={styles["d6"]}>
           <span>Address: {accommodation.address}</span>
         </span>
-
         <div className={styles["rentdetails"]} />
         <span className={styles["r1"]}>
           <span>{accommodation.price} EGP/Monthly</span>
         </span>
-
         <div className={styles["line2"]} />
         <div className={styles["r2"]} />
-
         <span className={styles["r3"]}>
           <span>Save to Wishlist</span>
         </span>
-
         <div className={styles["rectangle12"]}>
           <WishlistProvider>
-            <HeartButton id={accommodation.id} />
+            <HeartButton
+              accommodationId={id}
+              isWishlist={wishlist.includes(accommodation.id)}
+              onToggleWishlist={() => handleToggleWishlist(accommodation.id)}
+            />
           </WishlistProvider>
         </div>
 
