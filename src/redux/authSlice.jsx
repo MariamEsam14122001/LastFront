@@ -1,10 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Define a function to parse JSON safely
+const parseJSON = (jsonString) => {
+  try {
+    return JSON.parse(jsonString);
+  } catch (error) {
+    return null; // Return null if parsing fails
+  }
+};
+
+const userProfileFromSessionStorage = parseJSON(
+  sessionStorage.getItem("userProfile")
+);
+
 const initialState = {
   isAuthenticated: !!sessionStorage.getItem("authToken"),
   token: sessionStorage.getItem("authToken"),
   role: sessionStorage.getItem("userRole"),
-  userProfile: JSON.parse(sessionStorage.getItem("userProfile")) || null,
+  userProfile: userProfileFromSessionStorage || null,
 };
 
 const authSlice = createSlice({

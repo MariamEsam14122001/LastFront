@@ -23,6 +23,9 @@ const PropertyDetails = (props) => {
   const { id } = useParams();
   const { addToWishlist, removeFromWishlist, wishlist, error } = useWishlist();
   const [item, setItem] = useState(null);
+  const [imagesArray, setImagesArray] = useState([]);
+  const [VRimagesArray, setVRImagesArray] = useState([]);
+  const [showPanorama, setShowPanorama] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +35,12 @@ const PropertyDetails = (props) => {
         );
         console.log("API Response:", response.data);
         setItem(response.data);
+
+        // Store images fetched from backend
+        const fetchedImages = Array.isArray(response.data.accommodation.images)
+          ? response.data.accommodation.images
+          : response.data.accommodation.images.split(",");
+        setImagesArray(fetchedImages);
       } catch (error) {
         console.error("Error fetching the property details:", error);
       }
@@ -40,10 +49,17 @@ const PropertyDetails = (props) => {
     fetchData();
   }, [id]);
 
-  const [showPanorama, setShowPanorama] = useState(false);
   const togglePanorama = () => {
-    setShowPanorama(!showPanorama);
+    const vrImages = item.accommodation.images || []; 
+
+    if (vrImages.length > 0) {
+      setVRImagesArray(vrImages);
+      setShowPanorama(!showPanorama);
+    } else {
+      alert("No panoramic images available");
+    }
   };
+
   const handleToggleWishlist = (accommodationId) => {
     if (wishlist.includes(accommodationId)) {
       removeFromWishlist(accommodationId);
@@ -51,6 +67,7 @@ const PropertyDetails = (props) => {
       addToWishlist(accommodationId);
     }
   };
+
   if (error) {
     return <div>Error loading property details: {error.message}</div>;
   }
@@ -60,9 +77,6 @@ const PropertyDetails = (props) => {
   }
 
   const accommodation = item.accommodation;
-  const imagesArray = Array.isArray(accommodation.images)
-    ? accommodation.images
-    : accommodation.images.split(",");
 
   return (
     <>
@@ -73,7 +87,11 @@ const PropertyDetails = (props) => {
         <div className={styles["image1"]}>
           {showPanorama ? (
             <div className={styles["panorama-image"]}>
-              <VRList images={imagesArray} />
+              {VRimagesArray.length > 0 ? (
+                <VRList images={VRimagesArray} />
+              ) : (
+                <div>No panoramic images available</div>
+              )}
             </div>
           ) : (
             <ImagesList images={imagesArray} />

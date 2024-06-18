@@ -13,7 +13,6 @@ const Userform = () => {
   const [photoUrl, setPhotoUrl] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [photo, setPhoto] = useState(null); // New state for photo file
   const userProfile = useSelector((state) => state.auth.userProfile); // Access userProfile from Redux
   const token = useSelector((state) => state.auth.token); // Assuming token is stored in Redux
 

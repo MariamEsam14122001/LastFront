@@ -117,7 +117,7 @@ const Ownform = () => {
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             Authorization: `Bearer ${token}`,
-            "X-CSRF-TOKEN": csrfToken,
+            // "X-CSRF-TOKEN": csrfToken,
           },
         }
       );
