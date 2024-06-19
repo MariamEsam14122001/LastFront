@@ -71,7 +71,7 @@ const Roommatte = () => {
           <p className={styles["phoneinput"]}>{roommateData.phone}</p>
 
           <div className={styles["button"]}>
-            <Report />
+            <Report id={id}/>
           </div>
         </div>
       </div>

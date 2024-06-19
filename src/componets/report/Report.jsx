@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import styles from "./report.module.css";
-
+import { useSelector } from "react-redux";
 import axios from "axios";
 
-function Report() {
+function Report({id}) {
   const [showPopup, setShowPopup] = useState(false);
-
   const [report, setReport] = useState("");
+
+  // Get the current user's ID from the Redux store
+  const userId = useSelector((state) => state.auth.userProfile?.id);
 
   const handleButtonClick = () => {
     setShowPopup(true);
@@ -24,8 +26,9 @@ function Report() {
     e.preventDefault();
 
     const formData = new FormData();
-
     formData.append("report", report);
+    formData.append("roommateid", id); 
+    formData.append("user_id", userId); 
 
     try {
       const response = await axios.post(
@@ -37,14 +40,15 @@ function Report() {
           },
         }
       );
-      console.log(" send successfully:", response.data);
+      console.log("Report sent successfully:", response.data);
     } catch (error) {
-      console.error("send failed:", error);
+      console.error("Failed to send report:", error);
     }
 
     handleClosePopup();
-    setReport(null);
+    setReport("");
   };
+
 
   return (
     <div>
