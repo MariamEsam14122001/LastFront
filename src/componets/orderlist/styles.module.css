@@ -4,23 +4,27 @@ body {
 
 .orderlistcontainer {
   width: 80%;
+
   margin: 0 auto;
 }
 
 .orderlisttable {
   width: 60%;
-  border-collapse: collapse;
-  margin: 2.5rem 0; /* 20px */
-  left: 21.875rem; /* 350px */
+  border-collapse: separate;
+  background-color: white;
+  left: 25rem; /* 350px */
   top: 6.25rem; /* 100px */
   position: absolute;
+  border: 0.03rem;
+  box-shadow: 0.4rem 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 
 .orderlisttable th,
 .orderlisttable td {
-  border: 0.0625 solid #ddd;
+  border: 1 solid;
   padding: 0.5rem; /* 8px */
   text-align: center;
+  background-color: #fff5e1;
 }
 
 .orderlisttable th {
@@ -34,15 +38,11 @@ body {
 }
 
 .orderlistbutton {
-  padding: 0.3125rem 0.625rem; /* 5px 10px */
-  margin: 0 0.3125rem; /* 0 5px */
+  padding: 0.5rem 0.625rem; /* 5px 10px */
+  margin: 0.5rem; /* 0 5px */
   border: none;
   border-radius: 0.25rem; /* 4px */
   cursor: pointer;
-}
-
-.orderlistbutton:hover {
-  opacity: 0.8;
 }
 
 .orderlistbutton:focus {
@@ -50,11 +50,23 @@ body {
 }
 
 .orderlistbuttonaccept {
-  background-color: #4caf50;
+  background-color: #4caf4f8c;
   color: white;
+  border-color: #4caf4f8c;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1);
+}
+.orderlistbuttonaccept:hover {
+  transform: scale(1.05);
 }
 
 .orderlistbuttondefuse {
-  background-color: #f44336;
+  background-color: #f44336a8;
   color: white;
+  border-color: #f44336a8;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0.15rem 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.1);
+}
+.orderlistbuttondefuse:hover {
+  transform: scale(1.05);
 }

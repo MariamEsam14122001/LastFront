@@ -71,14 +71,14 @@
   font-weight: 800;
   width: 9.375rem; /* 150px */
   font-size: medium;
-  position: absolute;
-  top: 51.25rem; /* 820px */
-  left: 71.875rem; /* 1150px */
+  position: relative;
+
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .rent:hover {
-  background-color: #0c184467;
+  background-color: #fff5e1;
   transform: scale(1.05);
+  color: #0c1844;
 }
 
 .img {
@@ -124,22 +124,4 @@
   position: absolute;
   color: #000;
   top: 13.5rem; /* 190px */
-}
-
-.WhatsApp {
-  color: white;
-  text-decoration: none;
-  background-color: green;
-  cursor: pointer;
-  border-radius: 1.875rem; /* 30px */
-  border-style: solid;
-  padding: 0.3125rem; /* 5px */
-  margin-left: 6.875rem; /* 110px */
-  margin-top: 3.125rem; /* 50px */
-  font-weight: 700;
-  top: 51.25rem; /* 820px */
-  left: 75rem; /* 1200px */
-  width: 3.125rem; /* 50px */
-  height: 3.125rem; /* 50px */
-  position: absolute;
 }

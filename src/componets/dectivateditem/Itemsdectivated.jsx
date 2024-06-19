@@ -1,9 +1,9 @@
 // AccommodationList.jsx
 import React from "react";
-import Item2 from "./Item2";
-import styles from "./items2.module.css";
+import Itemdect from "./Itemdectivated";
+import styles from "./itemsdectivated.module.css";
 
-const Items2 = ({ datasets }) => {
+const Itemsdect = ({ datasets = [], onDelete }) => {
   return (
     <div className={styles["card-container"]}>
       <meta charset="UTF-8" />
@@ -11,12 +11,13 @@ const Items2 = ({ datasets }) => {
       <div className="row  row-cols-2 g-2">
         {datasets.map((dataset) => (
           <div className="col" key={dataset.id}>
-            <Item2
+            <Itemdect
               id={dataset.id}
               name={dataset.name}
               age={dataset.age}
-              location={dataset.location}
+              email={dataset.email}
               image={dataset.image}
+              onDelete={onDelete}
             />
           </div>
         ))}
@@ -25,4 +26,4 @@ const Items2 = ({ datasets }) => {
   );
 };
 
-export default Items2;
+export default Itemsdect;

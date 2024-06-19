@@ -1,0 +1,133 @@
+.card {
+  margin-left: 0.5rem; /* 50px */
+  margin-bottom: 1rem; /* 50px */
+  border: none;
+  width: 25rem;
+  /* Add margin to create space between cards */
+}
+
+.item {
+  width: 25rem; /* 250px */
+  height: 34.375rem; /* 550px */
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+  background-color: #fff5e1;
+  border-style: solid;
+  border-color: #0c1844;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+
+.wishlist {
+  top: 27rem;
+  left: 28rem;
+  width: 4rem; /* 64px */
+  height: 3.875rem; /* 62px */
+  position: absolute;
+}
+
+.content {
+  gap: 1rem; /* 16px */
+  top: 17.5rem; /* 280px */
+  left: 1.4375rem; /* 23px */
+  width: 23.4375rem; /* 375px */
+  height: 17.0625rem; /* 113px */
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+
+.frame53 {
+  gap: 1rem; /* 16px */
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.text {
+  color: #0c1844;
+  height: auto;
+  font-size: x-large; /* 16px */
+  font-style: Bold;
+  text-align: left;
+  font-family: Quicksand;
+  font-weight: 700;
+  line-height: 100%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.text2 {
+  color: #c80036;
+  height: auto;
+  font-size: x-large; /* 16px */
+  font-style: Bold;
+  text-align: left;
+  font-family: Inria Serif;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.frame52 {
+  gap: 0.5rem; /* 8px */
+  display: flex;
+  align-items: center;
+}
+
+.locationonblack24dp2 {
+  width: 1rem; /* 16px */
+  height: 1rem; /* 16px */
+}
+
+.text4 {
+  color: #0c1844;
+  height: auto;
+  font-size: x-large; /* 12px */
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 100%;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.image {
+  top: 1rem;
+  left: 3.5rem;
+  width: 18rem; /* 300px */
+  height: 10rem;
+  position: absolute;
+  border-radius: 1rem; /* 16px */
+}
+
+.root-class-name {
+  top: 67.4375rem; /* 1079px */
+  left: 7rem; /* 112px */
+  position: absolute;
+}
+.button {
+  position: relative;
+  width: 7rem;
+  left: 13rem;
+  top: 5rem;
+  border-radius: 2rem;
+  background-color: #0c1844;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: white;
+}
+.button:hover {
+  background-color: #fff5e1;
+  transform: scale(1.05);
+  color: #0c1844;
+}

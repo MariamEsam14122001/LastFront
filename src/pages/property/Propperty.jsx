@@ -13,11 +13,14 @@ import img1 from "../pictures/line.png";
 import Header from "../../componets/header/Header.jsx";
 import RentButton from "../../componets/rentbutton/Rent.jsx";
 import StarRating from "../../componets/ratingandreview/RC.jsx";
+import Footer from "../../componets/footer/Footer.jsx";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 // import bathroom from "./bathroom3.jpg";
 // import bedroom from "./bedroomred.jpg";
 // import living from "./living5.jpg";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const PropertyDetails = (props) => {
   const { id } = useParams();
@@ -26,23 +29,64 @@ const PropertyDetails = (props) => {
   const [imagesArray, setImagesArray] = useState([]);
   const [VRimagesArray, setVRImagesArray] = useState([]);
   const [showPanorama, setShowPanorama] = useState(false);
+  const userProfile = useSelector((state) => state.auth.userProfile);
+  const userId = userProfile ? userProfile.id : null;
+  const [roommateData, setRoommateData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Fetch accommodation details
         const response = await axios.get(
           `http://localhost:8000/api/accommodation/${id}`
         );
-        console.log("API Response:", response.data);
+        console.log("Accommodation API Response:", response.data);
         setItem(response.data);
 
-        // Store images fetched from backend
+        // Set images array
         const fetchedImages = Array.isArray(response.data.accommodation.images)
           ? response.data.accommodation.images
           : response.data.accommodation.images.split(",");
         setImagesArray(fetchedImages);
+
+        // Fetch rental data based on accommodation ID
+        const rentalsResponse = await axios.get(
+          `http://localhost:8000/api/rental_accommodation_id/${id}`
+        );
+        const rentedInfo = rentalsResponse.data;
+        console.log("Rental API Response:", rentedInfo);
+
+        // Check if rentedInfo is an object and has keys
+        if (
+          typeof rentedInfo === "object" &&
+          Object.keys(rentedInfo).length > 0
+        ) {
+          // Convert rentedInfo object into an array of rentals
+          const rentals = Object.values(rentedInfo);
+
+          // Find the rental that matches the accommodation ID
+          const rentedAccommodation = rentals.find(
+            (rental) => rental.accommodations_id == id
+          );
+          if (rentedAccommodation) {
+            const roommateUserId = rentedAccommodation.user_id;
+            console.log("Roommate User ID:", roommateUserId);
+
+            // Fetch roommate data based on user ID
+            const userResponse = await axios.get(
+              `http://localhost:8000/api/rental/user/${roommateUserId}`
+            );
+            console.log("Roommate API Response:", userResponse.data);
+            setRoommateData(userResponse.data);
+          } else {
+            console.log("No rented accommodation found for this property.");
+          }
+        } else {
+          console.log("No rentals found for this property.");
+        }
       } catch (error) {
-        console.error("Error fetching the property details:", error);
+        console.error("Error fetching data:", error);
+        setError(error.message);
       }
     };
 
@@ -50,13 +94,13 @@ const PropertyDetails = (props) => {
   }, [id]);
 
   const togglePanorama = () => {
-    const vrImages = item.accommodation.images || []; 
+    const vrImages = item.accommodation.images || [];
 
     if (vrImages.length > 0) {
       setVRImagesArray(vrImages);
       setShowPanorama(!showPanorama);
     } else {
-      alert("No panoramic images available");
+      console.log("No panoramic images available");
     }
   };
 
@@ -81,8 +125,7 @@ const PropertyDetails = (props) => {
   return (
     <>
       <Header />
-      <RentButton accommodationId={id} />
-      <StarRating />
+
       <div className={styles["property-details"]}>
         <div className={styles["image1"]}>
           {showPanorama ? (
@@ -98,7 +141,7 @@ const PropertyDetails = (props) => {
           )}
         </div>
         <button onClick={togglePanorama} className={styles["vrbutton"]}>
-          Property&apos;s Virtual Reality
+          Property's Virtual Reality
         </button>
         <span className={styles["d3"]}>
           <span>Governorate: {accommodation.governorate}</span>
@@ -121,14 +164,20 @@ const PropertyDetails = (props) => {
         <span className={styles["r3"]}>
           <span>Save to Wishlist</span>
         </span>
-        <div className={styles["rectangle12"]}>
-          <WishlistProvider>
-            <HeartButton
-              accommodationId={id}
-              isWishlist={wishlist.includes(accommodation.id)}
-              onToggleWishlist={() => handleToggleWishlist(accommodation.id)}
-            />
-          </WishlistProvider>
+        <div className={styles["rectangle12"]} />
+
+        <div className={styles["rentbutton"]}>
+          <RentButton accommodationId={id} />
+
+          <div className={styles["heart"]}>
+            <WishlistProvider>
+              <HeartButton
+                accommodationId={id}
+                isWishlist={wishlist.includes(accommodation.id)}
+                onToggleWishlist={() => handleToggleWishlist(accommodation.id)}
+              />
+            </WishlistProvider>
+          </div>
         </div>
 
         <img src={img1} alt="gege" className={styles["line"]} />
@@ -143,7 +192,7 @@ const PropertyDetails = (props) => {
             fontSize: "large",
             fontWeight: "600",
             position: "absolute",
-            left: "150px",
+            left: "10px",
           }}
         >
           <p>{accommodation.description}</p>
@@ -160,12 +209,24 @@ const PropertyDetails = (props) => {
         <span className={styles["provider"]}>
           <span>Roommate:</span>
         </span>
-        <img src={img7} alt={props} className={styles["providerphoto"]} />
+        {/* Ensure roommateData is not null before accessing its properties */}
+        {roommateData ? (
+          <Link to={`/roommate/${roommateData.id}`}>
+            <img
+              src={img7}
+              alt="Roommate"
+              className={styles["providerphoto"]}
+            />
+          </Link>
+        ) : (
+          <div>Loading roommate data...</div>
+        )}
         <span className={styles["text22"]}>
-          <span>
-            <span>yasmin mohamed</span>
-            <br />
-          </span>
+          {roommateData ? (
+            <span>{roommateData.name}</span>
+          ) : (
+            <span>Loading roommate data...</span>
+          )}
         </span>
 
         <img src={img1} alt="gege" className={styles["lineee"]} />
@@ -179,12 +240,15 @@ const PropertyDetails = (props) => {
           }}
         ></div>
       </div>
+      <StarRating propertyId={id} userId={userId} />
+      <div className={styles["foot"]}>
+        <Footer />
+      </div>
     </>
   );
 };
 
 export default PropertyDetails;
-
 // const PropertyDetails = (props) => {
 //   const { id } = useParams();
 //   const [item, setItem] = useState(null);

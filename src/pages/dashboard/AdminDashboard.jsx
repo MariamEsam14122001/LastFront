@@ -13,37 +13,26 @@ const AdminDashboard = () => {
       <div className={styles["managment"]}>
         <Link to="/accomodations">
           <button className={styles["AccommodationList"]}>
-            Accommodations List <br></br>Total Number: 3412
+            Accommodations List
           </button>
         </Link>
         <Link to="/user">
-          <button className={styles["UserList"]}>
-            User List <br></br>Total Number: 3412
-          </button>
+          <button className={styles["UserList"]}>User List</button>
         </Link>
         <Link to="/provider">
           {" "}
-          <button className={styles["providerList"]}>
-            Provider List <br></br>Total Number: 3412
-          </button>
+          <button className={styles["providerList"]}>Provider List</button>
         </Link>
         <div className={styles["Adminstrators"]}>
-          <Link>
-            {" "}
-            <button className={styles["Admin"]}>Adminstrators</button>
-          </Link>
+          <span className={styles["Admin"]}> Admin log out</span>
         </div>
         <Link to="/servicelist">
           {" "}
-          <button className={styles["Rental"]}>
-            Rental <br></br>Total Number: 3412
-          </button>
+          <button className={styles["Rental"]}>Rental list</button>
         </Link>
-        <Link>
+        <Link to="/deactivated">
           {" "}
-          <button className={styles["financialGrowth"]}>
-            Financial Growth <br></br>show details
-          </button>
+          <button className={styles["dectivate"]}>Dectivated users</button>
         </Link>
       </div>
     </div>

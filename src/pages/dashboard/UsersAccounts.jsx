@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-//import { Link } from "react-router-dom";
 import Side from "../../componets/sidebar/Sidebarcomponents.jsx";
-import Items2 from "../../componets/item2/Items2.jsx";
+import Itemsuser from "../../componets/usersitem/Itemsuser.jsx";
 
 const UsersAccounts = () => {
   const [accounts, setAccounts] = useState([]);
@@ -24,6 +23,15 @@ const UsersAccounts = () => {
     fetchAccounts();
   }, []);
 
+  const deleteAccount = async (id) => {
+    try {
+      await axios.delete(`http://localhost:8000/api/accounts/${id}`);
+      setAccounts(accounts.filter((account) => account.id !== id));
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -31,13 +39,15 @@ const UsersAccounts = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
+
   return (
     <div>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <Side />
-      <Items2 datasets={accounts} />
+      <Itemsuser datasets={accounts} deleteAccount={deleteAccount} />
     </div>
   );
 };
+
 export default UsersAccounts;

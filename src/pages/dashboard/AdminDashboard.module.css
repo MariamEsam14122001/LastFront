@@ -8,10 +8,12 @@
 
 .AccommodationList {
   position: absolute;
-  left: 3.125rem; /* 50px */
+  top: 17.8125rem; /* 270px */
+  left: 20rem; /* 300px */
   width: 15rem; /* 200px */
   height: 12.5rem; /* 200px */
-  top: 3.125rem; /* 50px */
+  color: #0c1844;
+  border-radius: 2rem;
   cursor: pointer;
   background-color: #fff5e1;
   border: none;
@@ -34,6 +36,8 @@
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   cursor: pointer;
+  border-radius: 2rem;
+  color: #0c1844;
   background-color: #fff5e1;
   border: none;
   background-image: url("./pictures/j.png");
@@ -55,8 +59,10 @@
   height: 12.5rem; /* 200px */
   top: 3.125rem; /* 50px */
   cursor: pointer;
+  border-radius: 2rem;
   background-color: #fff5e1;
   border: none;
+  color: #0c1844;
   background-image: url("./pictures/b.png");
   background-repeat: no-repeat;
   background-size: auto;
@@ -71,14 +77,16 @@
 
 .Adminstrators {
   position: absolute;
-  left: 54rem; /* 800px */
+  left: 37rem; /* 800px */
   width: 15rem; /* 200px */
+  border-radius: 2rem;
   height: 12.5rem; /* 200px */
-  top: 3.125rem; /* 50px */
+  top: 17.8125rem; /* 50px */
   background-image: url("./pictures/e.png");
   background-repeat: no-repeat;
   background-color: #fff5e1;
   background-size: auto;
+  color: #0c1844;
   background-position-x: center;
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
@@ -89,16 +97,12 @@
 
 .Admin {
   position: relative;
-  left:1rem; /* 50px */
-  /* width: 3rem; 120px */
+  left: 4.5rem; /* 50px */
+
   height: 2.5rem; /* 40px */
 
   top: 10rem; /* 150px */
- 
- 
-
 }
-
 
 .Rental {
   position: absolute;
@@ -108,6 +112,8 @@
   top: 17.8125rem; /* 270px */
   cursor: pointer;
   border: none;
+  border-radius: 2rem;
+  color: #0c1844;
   background-color: #fff5e1;
   background-image: url("./pictures/t.png");
   background-repeat: no-repeat;
@@ -121,23 +127,27 @@
   transform: scale(1.05);
 }
 
-.financialGrowth {
+.dectivate {
   position: absolute;
-  left: 20rem; /* 300px */
+
   width: 15rem; /* 200px */
+  top: 3.125rem; /* 50px */
+  left: 3.125rem; /* 50px */
   height: 12.5rem; /* 200px */
   border: none;
-  top: 17.8125rem; /* 270px */
+  border-radius: 2rem;
+  color: #0c1844;
   cursor: pointer;
   background-color: #fff5e1;
-  background-image: url("./pictures/r.png");
-  background-size: auto;
+  background-image: url("./pictures/dec.png");
+  background-size: 8rem;
   background-position-x: center;
+  background-position-y: 1rem;
   background-repeat: no-repeat;
   padding-top: 7.5rem; /* 120px */
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
-.financialGrowth:hover {
+.dectivate:hover {
   transform: scale(1.05);
 }

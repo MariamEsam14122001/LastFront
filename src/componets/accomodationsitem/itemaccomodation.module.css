@@ -1,12 +1,13 @@
 .card {
-  margin-left: 3.125rem; /* 50px */
-  margin-bottom: 3.125rem; /* 50px */
+  margin-left: 0.5rem; /* 50px */
+  margin-bottom: 1rem; /* 50px */
   border: none;
+  width: 25rem;
   /* Add margin to create space between cards */
 }
 
 .item {
-  width: 100%; /* 250px */
+  width: 25rem; /* 250px */
   height: 34.375rem; /* 550px */
   display: flex;
   position: relative;
@@ -14,14 +15,13 @@
   flex-shrink: 1;
   background-color: #fff5e1;
   border-style: solid;
-  border-color:   #0c1844;
+  border-color: #0c1844;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.item:hover{
+.item:hover {
   transform: scale(1.05);
-
 }
 
 .wishlist {
@@ -68,7 +68,7 @@
 .text2 {
   color: #c80036;
   height: auto;
-  font-size: x-large;  /* 16px */
+  font-size: x-large; /* 16px */
   font-style: Bold;
   text-align: left;
   font-family: Inria Serif;
@@ -92,7 +92,7 @@
 .text4 {
   color: #0c1844;
   height: auto;
-  font-size: x-large;  /* 12px */
+  font-size: x-large; /* 12px */
   font-style: Regular;
   text-align: left;
   font-family: Inter;
@@ -104,9 +104,9 @@
 
 .image {
   top: 1rem;
-  left: 2rem;
-  width: 30rem; /* 300px */
-  height: 15rem;
+  left: 3.5rem;
+  width: 18rem; /* 300px */
+  height: 10rem;
   position: absolute;
   border-radius: 1rem; /* 16px */
 }
@@ -115,4 +115,19 @@
   top: 67.4375rem; /* 1079px */
   left: 7rem; /* 112px */
   position: absolute;
+}
+.button {
+  position: relative;
+  width: 7rem;
+  left: 13rem;
+  top: 1rem;
+  border-radius: 2rem;
+  background-color: #0c1844;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: white;
+}
+.button:hover {
+  background-color: #fff5e1;
+  transform: scale(1.05);
+  color: #0c1844;
 }

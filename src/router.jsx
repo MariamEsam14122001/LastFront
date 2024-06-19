@@ -23,13 +23,14 @@ import PrivateRoute from "./Context/PrivateRoute.jsx";
 import Home from "./pages/dashboard/Servicelist.jsx";
 import Ownform from "./pages/accounts/Owneraccount.jsx";
 import Useform from "./pages/accounts/Useraccount.jsx";
+import Roommatte from "./pages/profiles/Roomate.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/Getstarted", element: <UserOwner /> },
   { path: "/Signup/:userType", element: <Signup /> },
   { path: "/Login", element: <Login /> },
-  { path: "/Admin", element: <PrivateRoute element={<AdminDashboard />} /> },
+  { path: "/Admin", element: <AdminDashboard /> },
   { path: "/search", element: <SearchPage /> },
   {
     path: "/wishlist",
@@ -62,6 +63,7 @@ const router = createBrowserRouter([
   { path: "/Useraccount", element: <Useform /> },
 
   { path: "/servicelist", element: <Home /> },
+  { path: "/roommate/:id", element: <Roommatte /> },
 ]);
 
 export default router;

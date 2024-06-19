@@ -56,11 +56,11 @@
 }
 .image1 {
   top: 93px;
-  left: 380px;
+  left: 250px;
   width: 880px;
   height: auto;
   position: absolute;
-  border: .1rem;
+  border: 0.1rem;
   border-style: solid;
   border-color: #0c1844;
 }
@@ -75,21 +75,21 @@
 }
 
 .rentdetails {
-  top: 656px;
-  left: 1200px;
+  top: 50rem;
+  left: 60rem;
   width: 330px;
   height: 186px;
   position: absolute;
-  border-color:#0c1844;
+  border-color: #0c1844;
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
-  /* background-color: #fff5e1; */
+  background-color: #fff5e1;
   box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 .r1 {
-  top: 685px;
-  left: 1270px;
+  top: 51rem;
+  left: 61.5rem;
   color: rgb(34, 32, 32);
   height: auto;
   position: absolute;
@@ -104,8 +104,8 @@
 }
 
 .r2 {
-  top: 797px;
-  left: 1260px;
+  top: 58rem;
+  left: 64rem;
   width: 218px;
   height: 35px;
   position: absolute;
@@ -116,8 +116,8 @@
 }
 
 .r3 {
-  top: 803px;
-  left: 1280px;
+  top: 58.5rem;
+  left: 65.5rem;
   color: rgb(34, 32, 32);
   height: auto;
   position: absolute;
@@ -133,37 +133,21 @@
 
 .rectangle12 {
   top: 797px;
-  left: 1430px;
+  left: 45rem;
   width: 38px;
   height: 37px;
-  
+
   position: absolute;
 }
 .rentbutton {
-  top: 732px;
-  left: 1250px;
-
-  position: absolute;
-}
-.renttext {
-  top: 738px;
-  left: 1340px;
-  color: rgb(34, 32, 32);
-  height: auto;
-  position: absolute;
-  font-size: 24px;
-  font-style: Extra Bold;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+  position: relative;
+  left: 57rem;
+  top: 51rem;
 }
 
 .d3 {
-  top: 712px;
-  left: 200px;
+  top: 861px;
+  left: 30px;
   color: rgb(34, 32, 32);
   height: auto;
   position: absolute;
@@ -177,8 +161,8 @@
   text-decoration: none;
 }
 .d4 {
-  top: 801px;
-  left: 200px;
+  top: 950px;
+  left: 30px;
   color: rgb(34, 32, 32);
   height: auto;
   position: absolute;
@@ -192,8 +176,8 @@
   text-decoration: none;
 }
 .d5 {
-  top: 717px;
-  left: 626px;
+  top: 861px;
+  left: 400px;
   color: rgb(34, 32, 32);
   height: auto;
   position: absolute;
@@ -207,8 +191,8 @@
   text-decoration: none;
 }
 .d6 {
-  top: 757px;
-  left: 626px;
+  top: 950px;
+  left: 400px;
   color: rgb(34, 32, 32);
   height: auto;
   position: absolute;
@@ -224,26 +208,24 @@
 .vrbutton {
   top: 550px;
   left: 350px;
-  width: 880px;
+  width: 600px;
   height: 81px;
   position: absolute;
   border-radius: 40px;
   color: white;
   font-size: xx-large;
   font-weight: 800;
-  background-color:#0c1844;
+  background-color: #0c1844;
 }
-.vrbutton:hover{
+.vrbutton:hover {
   background-color: #fff5e1;
   transform: scale(1.05);
   color: #0c1844;
-
 }
-
 
 .location {
   top: 1100px;
-  left: 40rem;
+  left: 22rem;
   color: #c80036;
   height: auto;
   position: absolute;
@@ -258,7 +240,7 @@
 }
 .description {
   top: 1100px;
-  left: 150px;
+  left: 1.5rem;
   color: #c80036;
   height: auto;
   position: absolute;
@@ -274,7 +256,7 @@
 
 .provider {
   top: 1100px;
-  left: 1200px;
+  left: 50rem;
   color: #c80036;
   height: auto;
   position: absolute;
@@ -289,7 +271,7 @@
 }
 .text15 {
   top: 1170px;
-  left: 47rem;
+  left: 30rem;
   color: #1679ab;
   height: auto;
   position: absolute;
@@ -301,11 +283,10 @@
   line-height: normal;
   font-stretch: normal;
   text-decoration: underline;
-  
 }
 .text22 {
   top: 1170px;
-  left: 1350px;
+  left: 60rem;
   color: rgb(34, 32, 32);
   height: auto;
   position: absolute;
@@ -320,30 +301,41 @@
 }
 .locationphoto {
   top: 1140px;
-  left: 40rem;
+  left: 22rem;
   width: 110px;
   height: 110px;
   position: absolute;
 }
 .providerphoto {
   top: 1140px;
-  left: 1200px;
+  left: 50rem;
   width: 110px;
   height: 110px;
   position: absolute;
 }
 .line {
   top: 1070px;
-  left: 120px;
-  width: 1400px;
+  left: 20px;
+  width: 1270px;
   height: 1px;
   position: absolute;
 }
 
 .lineee {
   top: 1400px;
-  left: 120px;
-  width: 1400px;
+  left: 20px;
+  width: 1270px;
   height: 1px;
   position: absolute;
+}
+.foot {
+  position: relative;
+  top: 130rem;
+}
+.heart {
+  position: relative;
+  top: 1.2rem;
+  left: 17.5rem;
+  width: 2rem;
+  height: 2rem;
 }
