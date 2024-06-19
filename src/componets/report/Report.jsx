@@ -3,7 +3,7 @@ import styles from "./report.module.css";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-function Report({id}) {
+function Report({ id }) {
   const [showPopup, setShowPopup] = useState(false);
   const [report, setReport] = useState("");
 
@@ -26,9 +26,9 @@ function Report({id}) {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("report", report);
-    formData.append("roommateid", id); 
-    formData.append("user_id", userId); 
+    formData.append("content", report);
+    formData.append("user_id", id);
+    formData.append("commented_by", userId);
 
     try {
       const response = await axios.post(
@@ -48,7 +48,6 @@ function Report({id}) {
     handleClosePopup();
     setReport("");
   };
-
 
   return (
     <div>
