@@ -16,7 +16,7 @@ const Itemsacco = ({ datasets = [], onDelete }) => {
               description={dataset.description}
               price={dataset.price}
               location={dataset.location}
-              image={dataset.image}
+              main_image={`http://localhost:8000/storage/${dataset.main_image}`}
               onDelete={onDelete}
             />
           </div>

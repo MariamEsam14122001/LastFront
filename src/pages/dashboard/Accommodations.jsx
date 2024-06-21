@@ -27,9 +27,7 @@ function Accommodations() {
   const deleteAccommodation = async (id) => {
     try {
       await axios.delete(`http://localhost:8000/api/accounts/${id}`);
-      setAccommodations(
-        accommodations.filter((accommodation) => accommodation.id !== id)
-      );
+      setAccommodations((prevAccommodations) => prevAccommodations.filter((accommodation) => accommodation.id !== id));
     } catch (err) {
       setError(err.message);
     }
@@ -48,10 +46,7 @@ function Accommodations() {
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <Side />
-      <Itemsacco
-        datasets={accommodations}
-        deleteAccommodation={deleteAccommodation}
-      />
+      <Itemsacco datasets={accommodations} onDelete={deleteAccommodation} />
     </div>
   );
 }

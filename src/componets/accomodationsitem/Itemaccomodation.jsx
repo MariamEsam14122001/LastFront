@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./itemaccomodation.module.css";
 import loc from "../pictures/location.png";
 //import { useParams } from "react-router-dom";
-function Itemacco({ id, description, price, location, image, onDelete }) {
+function Itemacco({ id, description, price, location, main_image, onDelete }) {
   const handleDelete = () => {
     onDelete(id);
   };
@@ -38,7 +38,7 @@ function Itemacco({ id, description, price, location, image, onDelete }) {
               Delete
             </button>
           </div>
-          <img src={image} alt="" className={styles["image"]} />
+          <img src={main_image} alt="" className={styles["image"]} />
         </div>
       </div>
     </div>
